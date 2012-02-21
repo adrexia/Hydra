@@ -1,0 +1,18 @@
+/* line 1, ../scss/ie.scss */
+.left .pageInfo {
+  position: relative;
+  top: -500px;
+}
+
+/* line 7, ../scss/ie.scss */
+.left .post {
+  position: relative;
+  top: -400px;
+}
+
+/* line 12, ../scss/ie.scss */
+.triangle {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #40078C !important;
+}

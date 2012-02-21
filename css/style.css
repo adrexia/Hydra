@@ -1,0 +1,2320 @@
+/*
+------------------------------
+	clean blue
+------------------------------
+*/
+/* line 10, ../scss/_plugins.scss */
+.jqiwarning .jqi {
+  background-color: #acb4c4;
+}
+
+/* line 13, ../scss/_plugins.scss */
+.jqifade {
+  position: absolute;
+  background-color: #1a1a1a;
+}
+
+/* line 17, ../scss/_plugins.scss */
+div.jqi {
+  position: absolute;
+  background-color: #ffffff;
+  width: 600px;
+  text-align: left;
+  border: none;
+}
+/* line 24, ../scss/_plugins.scss */
+div.jqi .pageHeading {
+  width: 580px;
+  text-align: left;
+  position: static;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+/* line 30, ../scss/_plugins.scss */
+div.jqi .pageHeading h2 {
+  width: 450px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -moz-binding: url(css/ellipsis.xml#ellipsis);
+}
+/* line 109, ../scss/_include.scss */
+div.jqi .content:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 116, ../scss/_include.scss */
+*:first-child div.jqi .content {
+  zoom: 1;
+}
+/* line 40, ../scss/_plugins.scss */
+div.jqi .jqicontainer {
+  background-color: #ffffff;
+}
+/* line 43, ../scss/_plugins.scss */
+div.jqi .jqiclose {
+  float: right;
+  width: 18px;
+  cursor: pointer;
+  margin: 3px 0px 0 0;
+  color: #ffffff;
+  font-weight: bold;
+}
+/* line 51, ../scss/_plugins.scss */
+div.jqi .jqibuttons {
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  text-align: right;
+  padding: 5px 0 5px 0;
+  border: solid 1px #eeeeee;
+  background-color: #f4f4f4;
+}
+/* line 58, ../scss/_plugins.scss */
+div.jqi button {
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  background: #5609bd;
+  /* Old browszzzzzers */
+  background: -moz-linear-gradient(top, #5609bd 0%, #40078c 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5609bd), color-stop(100%, #40078c));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #5609bd 0%, #40078c 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #5609bd 0%, #40078c 100%);
+  /* Opera11.10+ */
+  background: -ms-linear-gradient(top, #5609bd 0%, #40078c 100%);
+  /* IE10+ */
+  background: linear-gradient(top, #5609bd 0%, #40078c 100%);
+  /* W3C */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU2MDliZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzQwMDc4YyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5609bd), color-stop(100%, #40078c));
+  background-image: -webkit-linear-gradient(top, #5609bd, #40078c);
+  background-image: -moz-linear-gradient(top, #5609bd, #40078c);
+  background-image: -o-linear-gradient(top, #5609bd, #40078c);
+  background-image: -ms-linear-gradient(top, #5609bd, #40078c);
+  background-image: linear-gradient(top, #5609bd, #40078c);
+  padding: 5px 10px;
+  margin: 0 20px;
+  color: #c298fa;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+/* line 31, ../scss/_include.scss */
+#IE div.jqi button {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5609bd', endColorstr='#40078c',GradientType=0 );
+  /* IE6-9 */
+}
+/* line 68, ../scss/_plugins.scss */
+div.jqi button:hover {
+  background: #2a055b;
+  filter: none;
+}
+/* line 72, ../scss/_plugins.scss */
+div.jqi ul {
+  margin-left: 5px;
+}
+/* line 76, ../scss/_plugins.scss */
+div.jqi .asmContainer {
+  /* container that surrounds entire asmSelect widget */
+}
+/* line 80, ../scss/_plugins.scss */
+div.jqi .asmSelect {
+  /* the newly created regular 'select' */
+  display: inline;
+}
+/* line 85, ../scss/_plugins.scss */
+div.jqi .asmOptionDisabled {
+  /* disabled options in new select */
+  color: #999;
+}
+/* line 90, ../scss/_plugins.scss */
+div.jqi .asmHighlight {
+  /* the highlight span */
+  padding: 0;
+  margin: 0 0 0 1em;
+}
+/* line 96, ../scss/_plugins.scss */
+div.jqi .asmList {
+  /* html list that contains selected items */
+  margin: 0.25em 0 1em 0;
+  position: relative;
+  display: block;
+  padding-left: 0;
+  list-style: none;
+}
+/* line 105, ../scss/_plugins.scss */
+div.jqi .asmListItem {
+  /* li item from the html list above */
+  position: relative;
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  background: #ddd;
+  border: 1px solid #bbb;
+  width: 100%;
+  margin: 0 0 -1px 0;
+  line-height: 1em;
+}
+/* line 118, ../scss/_plugins.scss */
+div.jqi .asmListItem:hover {
+  background-color: #e5e5e5;
+}
+/* line 122, ../scss/_plugins.scss */
+div.jqi .asmListItemLabel {
+  /* this is a span that surrounds the text in the item, except for the remove link */
+  padding: 5px;
+  display: block;
+}
+/* line 128, ../scss/_plugins.scss */
+div.jqi .asmListSortable .asmListItemLabel {
+  cursor: move;
+}
+/* line 132, ../scss/_plugins.scss */
+div.jqi .asmListItemRemove {
+  /* the remove link in each list item */
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+}
+
+/************************************************
+Embedding fonts
+************************************************/
+@font-face {
+  font-family: 'RomanCapsRegular';
+  src: url("../fonts/roman_sd-webfont.eot");
+  src: url("../fonts/roman_sd-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roman_sd-webfont.woff") format("woff"), url("../fonts/roman_sd-webfont.ttf") format("truetype"), url("../fonts/roman_sd-webfont.svg#RomanCapsRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: SRomanSD;
+  src: url("../fonts/RomanSD.ttf");
+  /* TTF file for CSS3 friendly browsers */
+}
+
+@font-face {
+  font-family: FFRomanSD;
+  /*create font name*/
+  src: url("../fonts/RomanSD.ttf") format("truetype");
+  /*Firefox likes format:truetype*/
+}
+
+@font-face {
+  font-family: IERomanSD;
+  src: url("../fonts/RomanSD.eot");
+}
+
+/* experiments in color
+$mainColor:#684300; 
+$links: #8e6c39; 
+$lightLinks:lighten(mix($mainColor,$links, 40%),45%);  
+
+*/
+/*********************************
+General rules
+**********************************/
+/* line 57, ../scss/style.scss */
+body {
+  font-family: helvetica, arial, verdana, sans-serif;
+  background-color: #40078c;
+  color: #000000;
+  font-size: 0.9em;
+}
+
+/* line 64, ../scss/style.scss */
+a {
+  color: #043f8c;
+  text-decoration: none;
+}
+/* line 67, ../scss/style.scss */
+a:visited {
+  color: #8837f5;
+  text-decoration: none;
+}
+/* line 71, ../scss/style.scss */
+a:hover, a:active {
+  color: #8837f5;
+  text-decoration: underline;
+}
+
+/* line 77, ../scss/style.scss */
+h3.inline, p.inline {
+  display: inline;
+}
+
+/* line 81, ../scss/style.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* line 85, ../scss/style.scss */
+.italic {
+  font-style: italic;
+}
+
+/* line 89, ../scss/style.scss */
+.unem {
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 94, ../scss/style.scss */
+.clear {
+  clear: both;
+}
+
+/* line 98, ../scss/style.scss */
+.alignRight {
+  float: right;
+}
+
+/* line 102, ../scss/style.scss */
+.centre {
+  margin: 0px auto 40px auto;
+  text-align: center;
+}
+
+/* line 106, ../scss/style.scss */
+.centreText {
+  text-align: center;
+}
+
+/* line 110, ../scss/style.scss */
+span.left {
+  float: left;
+}
+
+/* line 114, ../scss/style.scss */
+.space {
+  margin-top: 60px;
+}
+
+/**************************************
+Content area rules
+***************************************/
+/* line 121, ../scss/style.scss */
+.wrap {
+  /*Sets content to center */
+  width: 910px;
+  margin: 0 auto 0 auto;
+  padding: 0;
+}
+
+/* line 129, ../scss/style.scss */
+div.right {
+  width: 200px;
+  float: right;
+  overflow: hidden;
+  clear: both;
+  margin-top: 20px;
+}
+/* line 137, ../scss/style.scss */
+div.right.cleared {
+  position: relative;
+}
+/* line 141, ../scss/style.scss */
+div.left {
+  width: 710px;
+  margin-top: 50px;
+}
+/* line 146, ../scss/style.scss */
+div#userNav {
+  position: relative;
+  z-index: 500;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0px 40px 0px 40px;
+  /*top right bottom left*/
+  height: 35px;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.45);
+}
+
+/* line 160, ../scss/style.scss */
+div#userNav, ul#subNav, ul#footNav {
+  font-variant: small-caps;
+}
+
+/* line 164, ../scss/style.scss */
+div#position {
+  position: absolute;
+  top: 8px;
+  width: 910px;
+}
+
+/* line 170, ../scss/style.scss */
+form#loginForm {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #000000;
+}
+
+/* line 177, ../scss/style.scss */
+div#userNav input#userName, div#userNav input#userPassword {
+  font-family: helvetica, arial, verdana, sans-serif;
+  color: #b3b3b3;
+  display: inline;
+  height: 15px;
+  width: 100px;
+  margin: -1px 0 0;
+  padding: 1px 0;
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+
+/* line 192, ../scss/style.scss */
+div#userNav input#loginSubmit {
+  font-family: helvetica, arial, verdana, sans-serif;
+  font-variant: small-caps;
+  padding: 0;
+  margin-top: -6px;
+}
+
+/* line 199, ../scss/style.scss */
+#breadcrumbs {
+  float: right;
+  text-align: right;
+  margin-top: -20px;
+  font-size: 0.8em;
+  height: 50px;
+  width: 360px;
+}
+/* line 206, ../scss/style.scss */
+#breadcrumbs .bCrumbs {
+  width: 360px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 20px;
+}
+
+/* line 215, ../scss/style.scss */
+.rightContent {
+  border: 1px solid #ccc;
+}
+
+/* line 219, ../scss/style.scss */
+div.post {
+  margin: 50px 0 0 0 !important;
+  width: 600px;
+}
+/* line 221, ../scss/style.scss */
+.left div.post {
+  margin: 0 !important;
+}
+
+/* line 227, ../scss/style.scss */
+ul#login {
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+}
+
+/* line 233, ../scss/style.scss */
+div#banner {
+  /*border-top:1px solid #2D0260;*/
+  padding: 30px 40px 0px 40px;
+  /*top right bottom left*/
+  background-color: #40078c;
+  color: #ffffff;
+}
+
+/* line 241, ../scss/style.scss */
+div#bannorImage {
+  width: 800px;
+  background-color: rgba(31, 3, 67, 0.2);
+  border-top: 2px solid rgba(31, 3, 67, 0.3);
+  border-bottom: 2px solid rgba(31, 3, 67, 0.3);
+  border-left: 2px solid rgba(62, 7, 135, 0.7);
+  border-right: 2px solid rgba(62, 7, 135, 0.7);
+  height: 200px;
+  overflow: hidden;
+  margin: -50px auto 0px auto;
+  text-align: center;
+}
+
+/* line 255, ../scss/style.scss */
+div#bannorImage img {
+  margin-top: -50px;
+}
+
+/* line 259, ../scss/style.scss */
+div.mainContent {
+  /*White Div*/
+  position: relative;
+  z-index: 400;
+  margin: 0px;
+  padding: 0;
+  padding-bottom: 1px;
+  margin-bottom: 60px;
+  background-color: #ffffff;
+  color: #838383;
+  margin-top: 20px;
+  -webkit-box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.45);
+}
+
+/* line 275, ../scss/style.scss */
+div.post {
+  position: relative;
+  top: 0px;
+  margin: 0;
+}
+
+/* line 281, ../scss/style.scss */
+div.otherContent {
+  /*Purple Div*/
+  padding: 0;
+  background-color: #40078c;
+  color: #838383;
+}
+
+/* line 288, ../scss/style.scss */
+div#footer {
+  padding: 4px 40px 4px 40px;
+  /*top right bottom left*/
+  color: #ffffff;
+  height: 60px;
+  background-color: #000000;
+  -webkit-box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.45);
+}
+
+/****************************************
+Navigation
+*****************************************/
+/* line 302, ../scss/style.scss */
+ul#mainNav li {
+  padding-bottom: 20px;
+}
+
+/* line 306, ../scss/style.scss */
+div#userNav li.set {
+  position: relative;
+  /*background: url("../images/pointer.png") no-repeat;
+  background-position: center 21px;*/
+}
+
+/* line 312, ../scss/style.scss */
+.triangle {
+  left: 20%;
+  position: absolute;
+  top: 19px;
+  right: auto;
+  display: inline;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #250452;
+}
+
+/* line 325, ../scss/style.scss */
+p.login {
+  float: right;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* line 332, ../scss/style.scss */
+div#userNav ul li, div#userNav ul, ul#subNav, ul#subNav li, ul#footNav, ul#footNav li {
+  display: inline;
+}
+
+/* line 336, ../scss/style.scss */
+div#userNav a, ul#subNav a, .messageNoUser p.note a, .messageNoUser p.keyNote a {
+  color: #a1a9ec;
+}
+
+/* line 340, ../scss/style.scss */
+.sub {
+  padding-top: 10px;
+}
+
+/* line 344, ../scss/style.scss */
+ul#footNav a {
+  color: #ffffff;
+}
+
+/* line 348, ../scss/style.scss */
+ul#footNav {
+  font-size: 0.7em;
+  float: right;
+  text-align: right;
+}
+
+/* line 354, ../scss/style.scss */
+span.navLabel {
+  font-size: 0.8em;
+  position: relative;
+  top: -1px;
+  color: #ffffff;
+  display: inline;
+  font-family: helvetica, arial, verdana, sans-serif;
+  height: 15px;
+  padding: 2px 5px 1px 5px;
+  vertical-align: middle;
+}
+
+/* line 366, ../scss/style.scss */
+input#searchTerm {
+  margin: 10px;
+  width: 120px;
+}
+
+/* line 371, ../scss/style.scss */
+input#search {
+  margin: 0;
+}
+
+/* line 375, ../scss/style.scss */
+ul#searchForm, ul#searchForm li {
+  display: inline;
+}
+
+/* line 379, ../scss/style.scss */
+ul.rightNav {
+  font-variant: small-caps;
+  font-family: Times, serif;
+  margin: 10px;
+  margin-left: 40px;
+  list-style-type: lower-roman;
+}
+
+/* line 387, ../scss/style.scss */
+#pageNav, .pageNav {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  background-color: #ffffff;
+}
+
+/* line 393, ../scss/style.scss */
+.gWrap {
+  float: left;
+  width: 450px;
+}
+
+/* line 398, ../scss/style.scss */
+#pageNav div.gameNav, .pageNav div.gameNav {
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #000000;
+  font-variant: small-caps;
+  font-size: 0.8em;
+}
+
+/* line 409, ../scss/style.scss */
+div.gameNav .statusRight {
+  float: left;
+  width: 70px;
+  font-style: normal;
+  text-align: right;
+}
+/* line 415, ../scss/style.scss */
+div.gameNav li {
+  padding-bottom: 40px !important;
+}
+/* line 419, ../scss/style.scss */
+div.games div.gameNav {
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #e9e9e9;
+}
+/* line 424, ../scss/style.scss */
+div.gameNav em.long {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #838383;
+}
+/* line 430, ../scss/style.scss */
+div.gameNav p {
+  margin-top: 2px;
+  padding-bottom: 2px;
+}
+
+/* line 436, ../scss/style.scss */
+#pageNav ul, .pageNav ul {
+  margin-left: 20px;
+  margin-right: 18px;
+  list-style-type: circle;
+}
+
+/* line 442, ../scss/style.scss */
+#pageNav ul li, .pageNav ul li {
+  margin-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  list-style-type: circle;
+}
+
+/* line 449, ../scss/style.scss */
+.gameNav ul {
+  font-variant: normal;
+  word-spacing: 0.2em;
+  line-height: 1em;
+}
+
+/* line 455, ../scss/style.scss */
+.pageForm {
+  width: 600px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+/* line 461, ../scss/style.scss */
+.pageForm #pageContent {
+  height: 500px;
+}
+
+/* line 465, ../scss/style.scss */
+#newsCancel {
+  float: left;
+}
+
+/*************************************
+Headings
+**************************************/
+/* line 472, ../scss/style.scss */
+.h2 {
+  width: 150px;
+  background-color: #000000;
+  color: #ffffff;
+  height: 30px;
+  text-align: center;
+}
+
+/* line 480, ../scss/style.scss */
+.h2 h2, .pageHeading h2 {
+  padding-top: 8px;
+  font-variant: small-caps;
+  font-weight: normal;
+  font-family: Times, serif;
+  font-size: 1.1em;
+}
+
+/* line 488, ../scss/style.scss */
+.pageHeading {
+  position: relative;
+  top: 0px;
+  width: 150px;
+  background-color: #000000;
+  color: #ffffff;
+  height: 30px;
+  text-align: center;
+}
+
+/* line 498, ../scss/style.scss */
+.right .h2 {
+  width: 200px;
+}
+
+/* line 502, ../scss/style.scss */
+.mainContent .h2 {
+  margin: 0;
+}
+
+/* line 506, ../scss/style.scss */
+div#banner h1, div#banner h2 {
+  font-family: RomanCapsRegular, SRomanSD, FFRomanSD, IERomanSD, serif;
+  font-smooth: always;
+  font-stretch: wider;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.496);
+  filter: dropshadow(color=white, offx=1, offy=0);
+  -webkit-font-smoothing: antialiased;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=hIEfix.png,sizingMethod=crop);
+  zoom: 1;
+}
+
+/* line 517, ../scss/style.scss */
+h3, .h4 h4 {
+  padding: 0;
+  margin: 0;
+  display: inline;
+  font-size: 1.3em;
+  color: #23044d;
+  font-variant: small-caps;
+  padding-bottom: 10px;
+  font-family: Times, serif;
+}
+
+/* line 528, ../scss/style.scss */
+.h4 h4 {
+  /*reset size attribute*/
+  font-size: 1em;
+}
+
+/* line 534, ../scss/style.scss */
+h5 {
+  color: #727272;
+  margin-bottom: 5px;
+}
+
+/* line 539, ../scss/style.scss */
+h3 a, h3 a:link, h3 a:visited, h3 a:active, h3 a:hover {
+  color: #23044d;
+  text-decoration: none;
+}
+
+/* line 544, ../scss/style.scss */
+.h3, .h4 {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 10px;
+  width: 600px;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 553, ../scss/style.scss */
+.h4 {
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+/* line 558, ../scss/style.scss */
+.pageForm textarea h3 {
+  font-weight: bold;
+}
+
+/*.pageContent h3{
+font-size:1.3em;
+}*/
+/* line 565, ../scss/style.scss */
+#pageNav h5, .pageNav h5 {
+  padding-top: 15px;
+  margin-left: 10px;
+  font-variant: small-caps;
+  font-family: Times, serif;
+}
+
+/* line 572, ../scss/style.scss */
+#pageNav h5.gameHeading, .pageNav h5.gameHeading {
+  margin-left: 0px;
+  font-size: 1.1em;
+}
+
+/* line 577, ../scss/style.scss */
+div#extraInfo img {
+  z-index: 500;
+  position: relative;
+  top: 0px;
+  vertical-align: middle;
+}
+
+/* line 584, ../scss/style.scss */
+div#extraInfo {
+  margin-top: -80px;
+  position: relative;
+  top: 50px;
+  text-align: center;
+  font-family: RomanCapsRegular, SRomanSD, FFRomanSD, IERomanSD, serif;
+  font-smooth: always;
+  font-stretch: wider;
+  -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.496);
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+  filter: dropshadow(color=white, offx=1, offy=0);
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  color: #ffffff;
+  overflow: hidden;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=hIEfix.png,sizingMethod=crop);
+  zoom: 1;
+}
+
+/* line 603, ../scss/style.scss */
+div#titleText {
+  /*HYDRA &bull;  */
+  float: left;
+  font-size: 3em;
+}
+
+/* line 609, ../scss/style.scss */
+div#title {
+  margin-bottom: 100px;
+}
+
+/* line 613, ../scss/style.scss */
+div#titleText h1 {
+  padding-right: 10px;
+}
+
+/* line 617, ../scss/style.scss */
+div#subTitleText {
+  /*Live Action Roleplaying Convention*/
+  padding-top: 15px;
+  font-size: 1.2em;
+}
+
+/* line 623, ../scss/style.scss */
+div#subTitleText h2 {
+  padding-left: 30px;
+}
+
+/* line 627, ../scss/style.scss */
+div#titleText h1, div#subTitleText h2 {
+  display: inline;
+}
+
+/* line 632, ../scss/style.scss */
+h4.profileH, p.error {
+  position: absolute;
+  top: -30px;
+  text-align: right;
+  width: 500px;
+}
+
+/* line 639, ../scss/style.scss */
+.gameDetails h5 {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: #727272;
+}
+
+/* line 646, ../scss/style.scss */
+.gameDetails h3 {
+  display: inline-block;
+  max-width: 490px;
+}
+
+/* line 651, ../scss/style.scss */
+.search h5 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: #727272;
+}
+
+/* line 657, ../scss/style.scss */
+#commentForm h5 {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+/* line 665, ../scss/style.scss */
+#commentError {
+  width: 300px;
+  font-size: 0.9em;
+  /*this needs to be small*/
+  float: right;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 150px;
+}
+
+/* line 676, ../scss/style.scss */
+.leaveComment h5 {
+  margin: 0px;
+  background-color: #000000;
+  font-variant: small-caps;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+/* line 684, ../scss/style.scss */
+.h3Form {
+  clear: left;
+  margin: 0px;
+  padding: 0;
+  padding-bottom: 10px;
+  width: 600px;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 694, ../scss/style.scss */
+h5.pageTitle {
+  color: #838383;
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+  padding-top: 10px;
+  font-size: 1.1em;
+  /*First definition of h5.pageTitle size*/
+}
+
+/* line 703, ../scss/style.scss */
+.commentTitle {
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #efefef;
+  margin: 0;
+  padding: 5px;
+  padding-left: 10px;
+  float: left;
+  background-color: #ffffff;
+  width: 535px;
+  font-variant: small-caps;
+  font-weight: normal;
+}
+
+/* line 716, ../scss/style.scss */
+.commentTitle h5 {
+  padding: 10px;
+  color: #23044d;
+  font-size: 1.2em;
+  /*First definition of .commentTitle h5 size*/
+  font-family: Times, serif;
+  display: inline;
+}
+
+/* line 726, ../scss/style.scss */
+h2#adminNav {
+  position: relative;
+  top: -50px;
+  left: 20px;
+  background-color: #2b2b2b;
+  width: 100px;
+  padding: 5px;
+  text-align: center;
+  font-size: 0.7em;
+  /*First Definition of adminNav size*/
+  border: 1px solid #838383;
+  border-top: none;
+}
+
+/* line 740, ../scss/style.scss */
+h2#adminNav a {
+  color: #ffffff;
+}
+
+/* line 744, ../scss/style.scss */
+div.pageInfo .h3 {
+  width: 560px;
+}
+
+/******************************************
+Right content types
+*******************************************/
+/* line 751, ../scss/style.scss */
+div.rightImage {
+  border: 1px solid #ccc;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 0.8em;
+  /*First definition of right Image font size*/
+  font-style: italic;
+}
+
+/* line 760, ../scss/style.scss */
+div.rightQuote {
+  margin-left: 5px;
+  margin-top: 50px;
+  width: 190px;
+  font-variant: small-caps;
+  font-family: Times, serif;
+}
+
+/* line 768, ../scss/style.scss */
+blockquote.author {
+  padding-top: 15px;
+  text-align: right;
+  font-size: 0.8em;
+}
+
+/* line 774, ../scss/style.scss */
+blockquote.quote {
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  quotes: "\201C" "\201D";
+  padding-top: 5px;
+  line-height: 1.2em;
+}
+
+/* line 783, ../scss/style.scss */
+blockquote:before {
+  color: #d0d0d0;
+  float: left;
+  padding-right: 5px;
+  margin-left: -20px;
+  margin-top: -5px;
+  font-size: 1.8em;
+  content: open-quote;
+  font-weight: bold;
+}
+
+/* line 794, ../scss/style.scss */
+blockquote:after {
+  color: #d0d0d0;
+  margin-top: 8px;
+  margin-right: -20px;
+  padding: 5px;
+  float: right;
+  font-size: 1.8em;
+  content: close-quote;
+  font-weight: bold;
+}
+
+/*********************************************
+Main content styleing
+*********************************************/
+/* line 807, ../scss/style.scss */
+.mainContent p {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* line 812, ../scss/style.scss */
+.mainContent p.user {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 817, ../scss/style.scss */
+.rightContent p {
+  color: #363636;
+  padding: 10px 10px 30px 10px;
+}
+
+/* line 822, ../scss/style.scss */
+.gameDetails p {
+  margin-top: 10px;
+}
+
+/* line 826, ../scss/style.scss */
+.postAuthor {
+  display: inline;
+  font-variant: small-caps;
+  float: right;
+  font-size: 0.7em;
+  /*Correct size? Needs to be smaller than average, but 0.7?*/
+  padding: 0;
+  padding-right: 10px;
+}
+
+/* line 836, ../scss/style.scss */
+.postContent {
+  font-weight: normal;
+  padding: 18px;
+  margin-bottom: 50px;
+  line-height: 1.2em;
+  color: #363636;
+  word-spacing: 0.3em;
+}
+
+/* line 845, ../scss/style.scss */
+.postContent p, .pageContent p, .formContent, .pageComment p {
+  margin-top: 0px;
+}
+
+/* line 849, ../scss/style.scss */
+.newsContent {
+  font-weight: normal;
+  padding: 18px;
+  margin: 0px;
+  margin-bottom: -20px;
+  line-height: 1.2em;
+  color: #363636;
+  word-spacing: 0.3em;
+}
+
+/* line 859, ../scss/style.scss */
+.newsContent p {
+  margin-top: 0px;
+}
+
+/* line 863, ../scss/style.scss */
+.postFooter {
+  font-variant: small-caps;
+  border-top: 1px solid #ccc;
+  position: relative;
+  top: 20px;
+  padding: 10px;
+  text-align: right;
+  font-size: 0.7em;
+  /*Correct size?*/
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  height: 12px;
+}
+
+/* line 877, ../scss/style.scss */
+.pageInfo .postFooter {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin-bottom: -40px;
+}
+
+/* line 883, ../scss/style.scss */
+.rightFooter {
+  font-variant: small-caps;
+  border-top: 1px solid #ccc;
+  position: relative;
+  top: 20px;
+  padding: 10px;
+  text-align: right;
+  font-size: 0.7em;
+  /*Correct Size?*/
+}
+
+/* line 894, ../scss/style.scss */
+.pageContent, .formContent, .pageComment {
+  font-weight: normal;
+  padding-right: 50px;
+  margin-bottom: 5px;
+  line-height: 1.2em;
+  color: #363636;
+  word-spacing: 0.3em;
+}
+
+/* line 903, ../scss/style.scss */
+.pageComment .note, .pageComment .keyNote {
+  width: 515px;
+}
+
+/* line 907, ../scss/style.scss */
+.pageContent br {
+  margin-top: 20px;
+}
+
+/* line 911, ../scss/style.scss */
+div.reg {
+  margin-top: 20px;
+}
+
+/* line 915, ../scss/style.scss */
+div.reg p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #e9e9e9;
+}
+
+/* line 921, ../scss/style.scss */
+div.reg p.postFooter {
+  border-bottom: none;
+  margin-bottom: 20px;
+}
+
+/* line 926, ../scss/style.scss */
+li .postFooter {
+  width: 500px;
+  margin: 50px auto -100px auto;
+  font-variant: small-caps;
+  border-top: 1px solid #e9e9e9;
+  padding: 10px;
+  text-align: right;
+  font-size: 0.7em;
+  /*Correct size?*/
+}
+
+/* line 937, ../scss/style.scss */
+div.pageInfo {
+  margin-bottom: 50px;
+  background-color: #f2f2f2;
+  width: 560px;
+  padding: 20px 20px 20px 20px;
+}
+
+/* line 944, ../scss/style.scss */
+.gameDetails .postFooter {
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+
+/* line 949, ../scss/style.scss */
+p.warning {
+  font-style: italic;
+  margin-top: -50px;
+}
+
+/* line 954, ../scss/style.scss */
+p.space {
+  margin: 20px;
+  margin-right: -20px;
+}
+
+/* line 959, ../scss/style.scss */
+.note, .keyNote {
+  margin: 20px;
+  margin-top: 0;
+  padding: 20px;
+  width: 520px;
+  border: 1px solid #e9e9e9;
+  text-align: center;
+  line-height: 20px;
+  background-color: #ffffff;
+  color: #363636;
+  word-spacing: 0.3em;
+}
+
+/* line 972, ../scss/style.scss */
+div.note, div.keyNote {
+  text-align: left;
+}
+
+/* line 976, ../scss/style.scss */
+.info {
+  position: relative;
+  top: -100px;
+}
+
+/* line 981, ../scss/style.scss */
+.timeStamp {
+  color: #b7b7b7;
+  float: right;
+  margin-right: 25px;
+  font-size: 0.8em;
+  /*Correct size?*/
+}
+
+/* line 989, ../scss/style.scss */
+.noInput {
+  color: #838383;
+  font-style: italic;
+}
+
+/* line 994, ../scss/style.scss */
+em.author {
+  float: right;
+  font-weight: normal;
+  font-size: 0.8em;
+  /*Correct size?*/
+  color: #363636;
+  word-spacing: 0.3em;
+}
+
+/* line 1003, ../scss/style.scss */
+.gameList {
+  width: 550px;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #e9e9e9;
+  float: left;
+}
+
+/* line 1014, ../scss/style.scss */
+.rego .gameList {
+  width: 580px;
+}
+
+/* line 1018, ../scss/style.scss */
+.gameList .label {
+  font-weight: bold;
+  color: #727272;
+}
+
+/* line 1023, ../scss/style.scss */
+.gameContent, .postContent {
+  padding: 20px;
+  width: 550px;
+}
+
+/* line 1028, ../scss/style.scss */
+#rego, .rego {
+  width: 600px;
+}
+
+/* line 1033, ../scss/style.scss */
+sub {
+  font-size: 10px;
+}
+
+/* line 1038, ../scss/style.scss */
+.keyNote {
+  width: 158px;
+  margin-left: 0;
+}
+
+/*.postContent p{
+font-size:0.9em;
+}
+.gameContent p{
+font-size:1.1em;
+}*/
+/* line 1049, ../scss/style.scss */
+.gameContent .messages {
+  padding: 0px;
+  margin: 0;
+}
+
+/* line 1054, ../scss/style.scss */
+#userBio {
+  width: 400px;
+}
+
+/* line 1058, ../scss/style.scss */
+.pageInfo .note, .pageInfo .keyNote {
+  width: 475px;
+}
+
+/* line 1062, ../scss/style.scss */
+.noSearch {
+  width: 550px;
+  margin-left: 20px;
+  padding-top: 10px;
+}
+
+/* line 1068, ../scss/style.scss */
+.formContent p.note, .formContent p.keyNote {
+  text-align: left;
+  background-color: #efefef;
+}
+
+/*****
+Information
+******/
+/* line 1076, ../scss/style.scss */
+.gender, .description, .status {
+  float: left;
+  padding-left: 20px;
+  margin-right: 20px;
+  width: 55px;
+  text-align: left;
+}
+
+/* line 1084, ../scss/style.scss */
+.description {
+  width: 100px;
+}
+
+/* line 1088, ../scss/style.scss */
+.alt {
+  background-color: #fbfbfb;
+  border-bottom: 1px dashed #efefef;
+}
+
+/* line 1093, ../scss/style.scss */
+.alt2 {
+  border-bottom: 1px dashed #efefef;
+}
+
+/* line 1097, ../scss/style.scss */
+.longText {
+  padding-left: 190px;
+  margin-right: 20px;
+  margin-top: 0px;
+}
+
+/* line 1103, ../scss/style.scss */
+.block br {
+  margin-top: -25px;
+}
+
+/* line 1107, ../scss/style.scss */
+.readMore {
+  text-align: center;
+  border: 1px solid #ccc;
+  width: 100px;
+  margin: 0 0 50px auto;
+  font-size: 0.8em;
+  /*Correct size?*/
+  font-style: italic;
+}
+
+/**************
+Tables
+**************/
+/* line 1120, ../scss/style.scss */
+table {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* line 1125, ../scss/style.scss */
+th {
+  text-align: left;
+}
+
+/* line 1129, ../scss/style.scss */
+td.long {
+  padding: 5px;
+  text-align: center;
+}
+
+/* line 1134, ../scss/style.scss */
+.tableText {
+  display: block;
+  width: 350px;
+  float: left;
+}
+
+/* line 1140, ../scss/style.scss */
+div.games {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+/* line 1145, ../scss/style.scss */
+.wide {
+  padding: 5px 20px;
+}
+/* line 1147, ../scss/style.scss */
+.wide li {
+  padding-bottom: 10px;
+}
+/* line 1150, ../scss/style.scss */
+.wide .label {
+  padding-left: 0px !important;
+}
+
+/* line 1155, ../scss/style.scss */
+div.games table, table.gameAdmin {
+  margin-bottom: 1em;
+}
+
+/* line 1159, ../scss/style.scss */
+.gameDetails tr td, table.gameAdmin tr td {
+  max-width: 200px;
+  padding: 5px;
+}
+
+/* line 1164, ../scss/style.scss */
+td.bold {
+  color: #7a7a7a;
+}
+
+/**********************************************
+Form styles
+***********************************************/
+/* line 1171, ../scss/style.scss */
+form {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+/* line 1177, ../scss/style.scss */
+#mainForm, #pForm {
+  margin: 0;
+  width: 600px;
+  float: left;
+}
+
+/* line 1183, ../scss/style.scss */
+#loginForm input[type=text], #loginForm input[type=password] {
+  width: 120px;
+  background-color: #000000;
+  color: #ccc;
+}
+
+/* line 1189, ../scss/style.scss */
+ul.form, ul.formB {
+  /*Form B has larger input fields*/
+  font-weight: normal;
+  line-height: 1.2em;
+  color: #363636;
+  word-spacing: 0.3em;
+  text-align: center;
+  float: left;
+  margin-bottom: 50px;
+}
+
+/* line 1200, ../scss/style.scss */
+.labelUser, ul.form label, ul.form .label, ul.formB label, ul.formB .label, .gameDetails label, .gameDetails .label, .gameList label, .gameList .label, div.jqi label, div.jqi .label {
+  float: left;
+  padding-left: 20px;
+  margin-right: 20px;
+  width: 150px;
+  text-align: left;
+}
+
+/* line 1215, ../scss/style.scss */
+.gameList li:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 1223, ../scss/style.scss */
+.hidden {
+  display: none;
+}
+
+/* line 1227, ../scss/style.scss */
+.details {
+  width: 60px;
+  text-align: center;
+}
+
+/* line 1232, ../scss/style.scss */
+.button, .downloadFile {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #A6CD70;
+  color: #fff;
+  font-weight: bold;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  padding: 5px 10px;
+  width: 40px;
+  -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+  -moz-box-shadow: 1px 1px 1px 1px #ccc;
+  box-shadow: 1px 1px 1px 1px #ccc;
+}
+/* line 1247, ../scss/style.scss */
+.button:visited, .downloadFile:visited {
+  color: #fff;
+}
+/* line 1250, ../scss/style.scss */
+.button:hover, .downloadFile:hover, .button:active, .downloadFile:active {
+  background-color: #82b23e;
+  color: #fff;
+  text-decoration: none;
+}
+/* line 1255, ../scss/style.scss */
+.button.view, .view.downloadFile {
+  background-color: #BA2A0A;
+}
+/* line 1257, ../scss/style.scss */
+.button.view:hover, .view.downloadFile:hover, .button.view:active, .view.downloadFile:active {
+  background-color: #ea350d;
+}
+/* line 1261, ../scss/style.scss */
+.button.user, .user.downloadFile {
+  display: inline;
+  width: auto;
+  text-align: left;
+  margin: 10px;
+  background-color: #c298fa;
+}
+/* line 1267, ../scss/style.scss */
+.button.user:hover, .user.downloadFile:hover, .button.user:active, .user.downloadFile:active {
+  background-color: #a568f7;
+}
+
+/* line 1282, ../scss/style.scss */
+.key {
+  width: 50px;
+}
+
+/* line 1287, ../scss/style.scss */
+.adminKey tr td, .adminFiles tr td {
+  height: 30px;
+  vertical-align: middle;
+}
+
+/* line 1302, ../scss/style.scss */
+.buttonImg {
+  background: url("../images/status.png") no-repeat 8px 0px;
+  display: inline-block;
+  margin: 0px 0;
+  width: 30px;
+  height: 20px;
+  text-indent: -10000px;
+}
+/* line 1309, ../scss/style.scss */
+.buttonImg:hover, .buttonImg:active {
+  background-position: -21px 0px;
+}
+/* line 1312, ../scss/style.scss */
+.buttonImg.pending {
+  background-position: 8px -29px;
+}
+/* line 1314, ../scss/style.scss */
+.buttonImg.pending:hover, .buttonImg.pending:active {
+  background-position: -21px -29px;
+}
+/* line 1318, ../scss/style.scss */
+.buttonImg.edit {
+  background-position: 8px -57px;
+}
+/* line 1320, ../scss/style.scss */
+.buttonImg.edit:hover, .buttonImg.edit:active {
+  background-position: -21px -57px;
+}
+/* line 1324, ../scss/style.scss */
+.buttonImg.download {
+  background-position: 8px -88px;
+}
+
+/* line 1332, ../scss/style.scss */
+.downloadFile {
+  padding: 10px 10px 10px 5px;
+  width: 170px;
+  text-align: left;
+  background-color: #62a4fb;
+  line-height: 20px;
+}
+/* line 1339, ../scss/style.scss */
+.downloadFile:hover {
+  background-color: #3087f9 !important;
+}
+/* line 1342, ../scss/style.scss */
+.downloadFile span {
+  margin-right: 10px;
+  margin-top: 0;
+}
+/* line 1346, ../scss/style.scss */
+.downloadFile a {
+  color: #fff;
+}
+/* line 1348, ../scss/style.scss */
+.downloadFile a:hover, .downloadFile a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 1355, ../scss/style.scss */
+.editRow {
+  width: 30px;
+}
+
+/* line 1359, ../scss/style.scss */
+th.editRow {
+  text-align: right;
+}
+
+/* line 1364, ../scss/style.scss */
+td.editRow a {
+  margin-right: 5px;
+}
+
+/* line 1367, ../scss/style.scss */
+ul.form label.inline, ul.formB label.inline, input.radio, .checkbox input {
+  float: left;
+  width: auto;
+  font-weight: normal;
+  text-align: left;
+  margin-left: 0;
+  padding-left: 15px;
+}
+
+/* line 1376, ../scss/style.scss */
+textarea {
+  text-align: left;
+  float: left;
+  width: 250px;
+  height: 100px;
+}
+
+/* line 1383, ../scss/style.scss */
+.textbox textarea {
+  font-size: 1em;
+  margin-left: 50px;
+  text-align: left;
+  float: left;
+  width: 350px;
+  height: 100px;
+  font-family: helvetica, arial, verdana, sans-serif;
+  font-weight: normal;
+  line-height: 1.2em;
+  color: #363636;
+  word-spacing: 0.3em;
+}
+
+/* line 1397, ../scss/style.scss */
+.textbox {
+  display: block;
+  clear: both;
+}
+
+/* line 1402, ../scss/style.scss */
+ul.form li.submit {
+  border: none;
+}
+
+/* line 1406, ../scss/style.scss */
+.submit {
+  padding: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+
+/* line 1412, ../scss/style.scss */
+.submit input#cSubmit {
+  font-size: 0.9em;
+  width: 350px;
+  margin-left: -75px;
+  margin-top: 10px;
+}
+
+/* line 1419, ../scss/style.scss */
+.leaveComment div.imgWrap {
+  top: 10px;
+  background-color: #ffffff;
+}
+
+/* line 1424, ../scss/style.scss */
+.leaveComment .formContent {
+  padding: 10px;
+  margin: 0px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+}
+
+/* line 1431, ../scss/style.scss */
+.leaveComment .info {
+  height: 80px;
+}
+
+/* line 1435, ../scss/style.scss */
+.formContent .imgWrap {
+  left: 420px;
+}
+
+/* line 1439, ../scss/style.scss */
+.leaveComment input {
+  width: 350px;
+}
+
+/* line 1443, ../scss/style.scss */
+li.commentBoxSmall textarea {
+  height: 50px;
+}
+
+/* line 1447, ../scss/style.scss */
+.checkbox {
+  margin-right: 50px;
+}
+
+/* line 1451, ../scss/style.scss */
+form input[type=text], form input[type=password], select, textarea {
+  border: 1px solid #ccc;
+}
+
+/* line 1455, ../scss/style.scss */
+ul.form input[type=text], ul.form input[type=password], ul.form select, ul.form textarea {
+  width: 200px;
+}
+
+/* line 1459, ../scss/style.scss */
+ul.formB input[type=text], ul.formB select {
+  width: 250px;
+}
+
+/* line 1463, ../scss/style.scss */
+ul.form li, ul.formB li {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: left;
+  display: block;
+  width: 563px;
+  border-bottom: 1px dashed #e9e9e9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 1475, ../scss/style.scss */
+ul.form li.hidden {
+  border: none;
+  padding: 0;
+}
+
+/* line 1480, ../scss/style.scss */
+ul.form .formExtra, ul.formB .formExtra {
+  font-size: 0.7em;
+  /*Correct size?*/
+  float: right;
+}
+
+/* line 1486, ../scss/style.scss */
+#pageSubmit {
+  margin-right: 100px;
+  float: right;
+}
+
+/* line 1491, ../scss/style.scss */
+ul.formB li.commentBox, ul.form li.last {
+  border: none;
+}
+
+/* line 1495, ../scss/style.scss */
+ul.formB li.submit {
+  width: 580px;
+  padding: 20px 0 0 20px;
+  margin: 0;
+  margin-top: 30px;
+  border: none;
+  border-top: 1px #ccc solid;
+}
+
+/* line 1504, ../scss/style.scss */
+.formContent {
+  margin-left: 10px;
+}
+
+/* line 1508, ../scss/style.scss */
+.formContent p {
+  padding: 0;
+}
+
+/* line 1512, ../scss/style.scss */
+p#loginError {
+  text-align: center;
+  background-color: #000000;
+  width: 250px;
+  padding: 10px;
+  position: absolute;
+  top: 20px;
+  right: 0px;
+}
+
+/* line 1522, ../scss/style.scss */
+p#adminPanel {
+  font-size: 0.9em;
+  text-align: center;
+  background-color: rgba(20, 2, 43, 0.4);
+  width: 260px;
+  padding: 10px;
+  position: absolute;
+  top: 27px;
+  right: 10px;
+}
+
+/* line 1533, ../scss/style.scss */
+.bioText textarea {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  width: 420px;
+  font-family: helvetica, arial, verdana, sans-serif;
+  font-weight: normal;
+  line-height: 1.2em;
+  color: #363636;
+  word-spacing: 0.3em;
+  height: 200px;
+}
+
+/* line 1545, ../scss/style.scss */
+#pForm label {
+  float: left;
+  width: 150px;
+}
+
+/* line 1550, ../scss/style.scss */
+.userOpt {
+  margin-top: 20px;
+}
+
+/* line 1554, ../scss/style.scss */
+.userOpt div.group, .userOpt div.repeatPassword {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px dashed #e9e9e9;
+  width: 450px;
+}
+
+/* line 1561, ../scss/style.scss */
+#profileSubmit {
+  float: right;
+  margin-top: 10px;
+  margin-right: 130px;
+}
+
+/* line 1567, ../scss/style.scss */
+ul.form li.divide {
+  border: 0;
+  margin-bottom: 10px;
+}
+
+/* line 1572, ../scss/style.scss */
+ul.form li.charName label {
+  color: #565656;
+  font-size: 1.2em;
+  /*Correct?*/
+  font-weight: bold;
+}
+
+/* line 1579, ../scss/style.scss */
+ul.form li.charName input {
+  padding: 5px;
+  color: #727272;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 1px solid #e9e9e9;
+  margin-left: -10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+/* line 1593, ../scss/style.scss */
+.search {
+  margin-left: 20px;
+  width: 550px;
+  margin-bottom: 30px;
+}
+
+/* line 1600, ../scss/style.scss */
+.pageInfo input[type=text] {
+  width: 300px;
+}
+
+/* line 1604, ../scss/style.scss */
+.pageForm textarea {
+  float: left;
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  width: 560px;
+  height: 300px;
+}
+
+/* line 1613, ../scss/style.scss */
+.pageForm input[type=submit] {
+  clear: left;
+  margin-right: 30px;
+  margin-left: 20px;
+  margin-top: 20px;
+  position: relative;
+  width: 100px;
+}
+
+/* line 1622, ../scss/style.scss */
+.newsSubmit {
+  text-align: right;
+}
+
+/*****************************
+Comments
+******************************/
+/* line 1629, ../scss/style.scss */
+.messages {
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  margin-top: -60px;
+}
+
+/* line 1636, ../scss/style.scss */
+.commentText {
+  float: left;
+  width: 410px;
+}
+
+/* line 1641, ../scss/style.scss */
+.pageComment p.note, .pageComment p.keyNote {
+  width: 480px;
+}
+
+/* line 1645, ../scss/style.scss */
+.commentText {
+  margin-left: 0px;
+  padding-left: 10px;
+}
+
+/* line 1650, ../scss/style.scss */
+.commentDetail {
+  background-color: #ffffff;
+  float: left;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  width: 530px;
+  padding: 0;
+  margin: 0;
+  padding: 10px;
+  font-weight: normal;
+  line-height: 1.2em;
+  color: #363636;
+  word-spacing: 0.3em;
+}
+
+/* line 1665, ../scss/style.scss */
+#commentTitle {
+  font-size: 0.9em;
+  float: right;
+  margin-right: 126px;
+}
+
+/* line 1671, ../scss/style.scss */
+.messageNoUser p.note, .messageNoUser p.keyNote {
+  margin-top: 0px;
+  float: left;
+  width: 500px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* line 1679, ../scss/style.scss */
+.messageNoUser {
+  height: 100px;
+  margin-left: -15px;
+}
+
+/******************************************
+User Details
+*******************************************/
+/* line 1687, ../scss/style.scss */
+.imgWrap {
+  position: relative;
+  left: 450px;
+  width: 100px;
+  border: 1px solid #e9e9e9;
+  margin-top: 20px;
+  height: 110px;
+}
+/* line 1694, ../scss/style.scss */
+.imgWrap img {
+  width: 100px;
+}
+
+/* line 1699, ../scss/style.scss */
+.bioText {
+  margin-top: -130px;
+  width: 420px;
+}
+
+/* line 1704, ../scss/style.scss */
+p.userName {
+  text-align: center;
+  padding: 0px;
+  margin: 0;
+}
+
+/* line 1710, ../scss/style.scss */
+.bioText p {
+  display: block;
+}
+
+/*********************************
+List styles
+**********************************/
+/* line 1717, ../scss/style.scss */
+ol.main li {
+  list-style-type: decimal;
+  margin: 10px 10px 0px 30px;
+}
+
+/* line 1722, ../scss/style.scss */
+ul.main li {
+  list-style-type: disc;
+  margin: 5px 10px 0px 30px;
+}
+
+/* line 1727, ../scss/style.scss */
+ol.main, ul.main {
+  margin-bottom: 20px;
+}
+
+/* line 1731, ../scss/style.scss */
+ul.gameComments li .postFooter {
+  color: #ffffff;
+  border: 1px solid #ccc;
+  float: left;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 530px;
+  margin-top: -20px;
+  margin-bottom: 50px;
+  background-color: #000000;
+  height: 10px;
+  text-align: right;
+  font-size: 0.7em;
+  /*correct?*/
+}
+
+/* line 1748, ../scss/style.scss */
+ul.gameComments li .postFooter a {
+  color: #a1a9ec;
+}
+
+/* line 1752, ../scss/style.scss */
+ul.gameComments li #delete .postFooter {
+  padding-bottom: 10px;
+  height: 20px;
+}
+
+/* line 1757, ../scss/style.scss */
+li.noInput {
+  margin-bottom: 20px;
+}
+
+/* line 1761, ../scss/style.scss */
+ul.form li.charName label, ul.form li.charName div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 1766, ../scss/style.scss */
+ul.form li.charName {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 10px 10px 5px 0px;
+  background-color: #e9e9e9;
+}
+
+/* line 1773, ../scss/style.scss */
+.search li {
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #ccc;
+}
+
+/* line 1778, ../scss/style.scss */
+li.subli ul.subH li {
+  background-image: url("../images/page.png");
+}
+
+/* line 1782, ../scss/style.scss */
+.pageContent .games .gameNav ul li {
+  padding-bottom: 1em;
+}
+
+/* line 1786, ../scss/style.scss */
+li.profileSearch {
+  margin-left: 20px;
+  padding: 10px;
+  list-style-type: circle;
+}
+
+/* line 1792, ../scss/style.scss */
+ul.sitemap {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+}
+
+/* line 1799, ../scss/style.scss */
+ul.sitemap li.top {
+  display: block;
+  padding: 10px;
+  padding-left: 40px;
+  padding-top: 18px;
+  margin-bottom: -10px;
+  background-image: url("../images/page.png");
+  background-repeat: no-repeat;
+  background-position: 0.5em;
+  height: 20px;
+}
+
+/* line 1811, ../scss/style.scss */
+ul.sitemap {
+  float: left;
+  margin: 20px;
+  margin-right: 20px;
+  width: 420px;
+  background-color: #ffffff;
+  color: #838383;
+  padding: 4px;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+/* line 1823, ../scss/style.scss */
+ul.sub, ul.subH {
+  display: block;
+  margin-left: 30px;
+}
+
+/* line 1828, ../scss/style.scss */
+li.subli {
+  list-style: none;
+  padding: 10px;
+}
+
+/* line 1833, ../scss/style.scss */
+li.subli ul.sub li, li.subli ul.subH li {
+  padding-left: 40px;
+  padding-top: 10px;
+  background-image: url("../images/lock.png");
+  background-repeat: no-repeat;
+  background-position: 0.5em;
+  height: 20px;
+}
+
+/* line 1842, ../scss/style.scss */
+.pageList li {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* line 1847, ../scss/style.scss */
+ul.gameComments li {
+  margin-left: 0px;
+}
+
+/* line 1851, ../scss/style.scss */
+ul.gameComments .imgWrap {
+  position: static;
+  float: right;
+  margin: 0;
+  margin-left: -10px;
+  padding: 0px;
+}
+
+/* line 1859, ../scss/style.scss */
+.userName {
+  width: 70px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -moz-binding: url(css/ellipsis.xml#ellipsis);
+}
+
+/* line 1864, ../scss/style.scss */
+.name {
+  width: 140px;
+}
+
+/* line 1868, ../scss/style.scss */
+.email {
+  width: 180px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -moz-binding: url(css/ellipsis.xml#ellipsis);
+}
+
+/* line 1874, ../scss/style.scss */
+ul.form li.Second_4, ul.formB li.Second_4 {
+  display: none !important;
+}
+
+/************************************************************************************************
+
+                                    Print Style Sheet
+
+**************************************************************************************************/
+@media print {
+  /* line 1886, ../scss/style.scss */
+  body {
+    background: none;
+  }
+
+  /* line 1889, ../scss/style.scss */
+  #userNav, #footer, .right {
+    display: none;
+  }
+}
+/************************************************************************************************
+
+                                  Mobile Style Sheet
+
+**************************************************************************************************/
+@media handheld {
+  /* line 1901, ../scss/style.scss */
+  img {
+    display: none;
+  }
+
+  /* line 1904, ../scss/style.scss */
+  .wrap {
+    width: 500px;
+  }
+}

@@ -1,0 +1,8 @@
+conf.php
+users/*
+.sass-cache/*
+
+error_log
+
+Capfile
+

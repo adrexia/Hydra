@@ -4,11 +4,12 @@
 		var request = null;		
 
 		$('.flexslider').flexslider({
+		        pauseOnAction: false,
                         animation: "slide", 
                         slideshowSpeed:10000, 
                         pausePlay: true,  
                         pauseText: " ",
-                        playText: " ",         
+                        playText: " "      
    
                 });
             

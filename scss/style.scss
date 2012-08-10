@@ -49,9 +49,10 @@ div{
   }
   
   &.left {
-    width: 710px; 
+    width: 600px; 
    // margin-top:50px;
     float:left;
+    margin-right:110px;
   }
   
   &#userNav {
@@ -281,8 +282,7 @@ div#userNav{
       display: inline;  
       &.set {
         position: relative;
-      }
-      
+      }      
     }
   }  
 } 
@@ -329,14 +329,120 @@ span.navLabel {
 }
 
 input#searchTerm, input#searchSubmit {
-
-  line-height:1.2em;
-  height:1.2em;
-  font-size:1.5em;
   width: 100%;  
 }
+
+h3{
+   input[type=text]{
+      color:$headingColor;
+     font-family: Times, serif; 
+      font-weight:bold; 
+      line-height:30px;
+      height:30px;    
+      text-indent:5px;
+      width:100%;
+  }
+  :-placeholder {  
+      font-size:1em;
+      font-style:normal;
+      color:rgba($headingColor,0.5) !important;
+      font-variant: small-caps;
+      padding-bottom: 10px;
+      font-family: Times, serif; 
+      font-weight:bold; 
+      line-height:30px;
+      height:30px;
+      padding-top:5px; 
+  }
+  
+  ::-webkit-input-placeholder {
+      font-size:1em;
+      font-style:normal;
+      color:rgba($headingColor,0.5) !important;
+      font-variant: small-caps;
+      padding-bottom: 10px;
+      font-family: Times, serif; 
+      font-weight:bold; 
+      line-height:30px;
+      height:30px;
+      padding-top:5px;
+  }
+  
+  :-moz-placeholder {  
+      font-size:1em;
+      font-style:normal;
+      color:rgba($headingColor,0.5) !important;
+      font-variant: small-caps;
+      padding-bottom: 10px;
+      font-family: Times, serif; 
+      font-weight:bold; 
+      line-height:30px;
+      height:30px;
+      padding-top:5px;
+  }  
+  
+  :-o-placeholder {  
+      font-size:1em;
+      font-style:normal;
+      color:rgba($headingColor,0.5) !important;
+      font-variant: small-caps;
+      padding-bottom: 10px;
+      font-family: Times, serif; 
+      font-weight:bold; 
+      line-height:30px;
+      height:30px;
+      padding-top:5px; 
+  } 
+  
+ 
+  
+}
+
+:-placeholder {  
+   color: lighten(#ccc,5%);
+   font-size:0.9em;
+   font-style:italic;
+}
+::-webkit-input-placeholder {
+    color: lighten(#ccc,2%);
+   font-size:0.9em;
+   font-style:italic;
+}
+
+:-moz-placeholder {  
+     color: lighten(#ccc,2%);
+   font-size:0.9em;
+   font-style:italic;
+}
+
+
+:-o-placeholder {  
+     color: lighten(#ccc,2%);
+   font-size:0.9em;
+   font-style:italic;
+}
+
+
 input#searchSubmit {
   display:none;
+}
+
+input{
+  border:1px solid #ccc;
+    line-height:30px;
+  height:30px;
+  font-size:1em;
+  
+  &[type=search]{
+    @include roundAllCorners(2px);
+  }
+  
+  &:focus {
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.4);
+    outline: 0;
+    
+  }
 }
 
 input#search {
@@ -980,8 +1086,8 @@ ul.gameList {
 }
 
 #rego,.rego {
-  width: 600px;  
-  
+  width: 100%;  
+  clear:both;
 }
 
 sub{

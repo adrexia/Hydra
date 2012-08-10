@@ -169,7 +169,7 @@ class Generate extends DataBase
 		}	
 		$html.=$wrap;		
 		$html.='<div class="h3"><h3><a name="'.$newsID.'">'.$newsTitle.'</a></h3>'."\n";
-		$html.='<em class="author"><br />posted by <a href="index.php?pageName=profile&amp;userID='.$userID.'">'.$userName.'</a></em></div>'."\n";
+		$html.='<em class="author">posted by <a href="index.php?pageName=profile&amp;userID='.$userID.'">'.$userName.'</a></em></div>'."\n";
 		$html.='<div class="newsContent">'."\n".'<p>'."\n";
 		if(strlen($newsText)>0){
 			$html.=nl2br($newsText);	//turns all \n into <br />

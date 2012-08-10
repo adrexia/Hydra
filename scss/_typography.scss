@@ -24,9 +24,11 @@ Headings
 **************************************/
 .h2 {
   width: 150px;
-  background-color: #000000;
+    @include background(
+      $mainColor url(../images/texture5.png) top left repeat    
+    );
   color: #ffffff;
-  height: 30px;
+  height: 35px;
   text-align: center; 
   @include roundTopCorners(3px);
 }
@@ -43,9 +45,11 @@ Headings
   position: relative;
   top: 0px;
   width: 150px;
-  background-color: #000000;
+  @include background(
+      $mainColor url(../images/texture5.png) top left repeat    
+    );
   color: #ffffff;
-  height: 30px;
+  height: 35px;
   text-align: center; 
   @include roundBottomCorners(3px);
 }

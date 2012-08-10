@@ -285,11 +285,19 @@ abstract class View{
 		$html='<div id="bannorImage">'."\n";
                 $html.='<div class="flexslider" id="slider">';
                 $html.='<ul class="slides">';
+               
                 foreach($file as $key => $value){
-                    if($value != '.' && $value != '..'){  
-                        $html.='<li>';
+                    
+                    if($value != '.' && $value != '..'){
+                        if($value=='1.jpg'){
+                            $class=' class="flex-active-slide"';
+                        }else{
+                             $class="";   
+                        }     
+                        $html.='<li'.$class.'>';
                         $html.='<img style="border-width: 0px;" src="images/header/'.$value.'" alt="Larp"  />'."\n";
                         $html.='</li>';
+                        
                     }
                }
                $html.='</ul>';

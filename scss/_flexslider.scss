@@ -25,13 +25,23 @@
 .flexslider {
   margin: 0;
   padding: 0;
+  
   .slides {
     > li {
       display: none;
-      -webkit-backface-visibility: hidden; }
+      -webkit-backface-visibility: hidden; 
+    }
     img {
       width: 100%;
-      display: block; } } }
+      display: block; 
+    } 
+  } 
+  .flex-active-slide{
+    display:block !important;
+    
+  }
+  
+}
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
 

@@ -22,18 +22,10 @@
 
     */
 
-@import "compass/css3/font-face";
-$fontAwesomePath: "fontawesome-webfont" !default;
+//@import "compass/css3/font-face";
+//$fontAwesomePath: "fontawesome-webfont" !default;
 
-@include font-face(
-    'FontAwesome',
-    font-files(
-        "#{$fontAwesomePath}.woff", woff,
-        "#{$fontAwesomePath}.ttf", truetype,
-        "#{$fontAwesomePath}.svg#FontAwesomeRegular", svg),
-    '#{$fontAwesomePath}.eot',
-    normal,
-    normal);
+
 
 /*  Font Awesome styles
     ------------------------------------------------------- */

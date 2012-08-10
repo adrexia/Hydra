@@ -230,7 +230,7 @@ class Model extends DataBase{
 			case 'news':
 				extract($_POST);
 				if($this->validate->checkRequired($newsTitle)){
-					$result['msg']='Your news posts must have a Title.<br />';
+					$result['msg']='Your news posts must have a Headline.<br />';
 				}
 				if($this->validate->checkRequired($newsText)){
 					$result['msg'].='You are trying to post an empty news post!';

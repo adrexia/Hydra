@@ -1,5 +1,6 @@
 @import "compass/css3/images";
-
+@import "compass/css3/font-face";
+@import "font-awesome";
 
  
 ///* experiments in color
@@ -14,7 +15,7 @@ $headingColorLink: $headingColor;
 /************************************************
 Embedding fonts
 ************************************************/
-
+/*
 @font-face{ 
   font-family: 'WebSymbolsRegular';
   src: url('fonts/websymbols-regular-webfont.eot');
@@ -23,6 +24,18 @@ Embedding fonts
        url('fonts/websymbols-regular-webfont.ttf') format('truetype'),
        url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
   }
+*/
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("fonts/fontawesome-webfont.eot");
+  src: url("fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), 
+  url("fonts/fontawesome-webfont.woff") format("woff"), 
+  url("fonts/fontawesome-webfont.ttf") format("truetype"), 
+  url("fonts/fontawesome-webfont.svg#FontAwesomeRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; 
+ }
 
 @font-face {
   font-family: 'RomanCapsRegular';

@@ -37,8 +37,41 @@
 
 .flex-pauseplay{
   position:absolute;
-  bottom:10px;
+  bottom:0px;
   right:10px;
+  a{
+   color: transparent;
+   height:40px;
+   width:100%;
+  
+  &.flex-pause{
+    font-family:FontAwesome;
+    @extend .icon-pause; 
+    color:darken($mainColor,15%);
+    font-size:1.8em;
+    line-height:1.2em;
+    text-shadow: 0px 0px 2px #fff;
+    opacity:0.7;
+    display:block;
+    &:hover{
+      opacity:1;
+    }
+  }
+  &.flex-play{
+      font-family:FontAwesome;
+   @extend .icon-play; 
+    color:darken($mainColor,15%);
+    font-size:1.8em;
+    line-height:1.2em;
+    text-shadow: 0px 0px 2px #fff;
+    opacity:0.7;
+    display:block;
+    &:hover{
+      opacity:1;
+    }
+       
+  }
+  }
   
   span {
     text-transform: capitalize; 

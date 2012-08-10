@@ -139,8 +139,8 @@ abstract class View{
 	public function displayEdit(){
 		$html='<div id="wysihtml5-toolbar" style="display: none;">';
 		$html.='<a class="icon-bold" data-wysihtml5-command="bold"></a>';
-		$html.='<a data-wysihtml5-command="italic"><em>T</em></a>';	  
-		$html.='<a data-wysihtml5-command="createLink">K</a>';
+		$html.='<a class="icon-italic" data-wysihtml5-command="italic"></a>';	  
+		$html.='<a class="icon-link" data-wysihtml5-command="createLink"></a>';
 		$html.='<div data-wysihtml5-dialog="createLink" style="display: none;">';
 		$html.=' <label>';
 		$html.=' Link:';
@@ -149,12 +149,12 @@ abstract class View{
 		$html.=' <a data-wysihtml5-dialog-action="save">OK</a> <a data-wysihtml5-dialog-action="cancel">Cancel</a>';
 		$html.='</div>';
 
-		$html.='<a data-wysihtml5-command="insertOrderedList">q</a>';
-		$html.='<a data-wysihtml5-command="insertUnorderedList">p</a>';
+		$html.='<a class="icon-list-ol" data-wysihtml5-command="insertOrderedList"></a>';
+		$html.='<a class="icon-list-ul"data-wysihtml5-command="insertUnorderedList"></a>';
 		$html.='<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h3" class="plainFont">H3</a>';
 		$html.='<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h4" class="plainFont">H4</a>';
-		$html.='<a data-wysihtml5-action="change_view" title="Show HTML" class="action wysihtml5-action" href="javascript:;" unselectable="on">H</a>';
-		$html.='<a data-wysihtml5-command="insertImage">I</a>';
+		$html.='<a class="icon-chevron-left" data-wysihtml5-action="change_view" title="Show HTML" class="action wysihtml5-action" href="javascript:;" unselectable="on"> <i class="icon-chevron-right"></i></a>';
+		$html.='<a class="icon-camera" data-wysihtml5-command="insertImage"></a>';
 		$html.='<div data-wysihtml5-dialog="insertImage" style="display: none;">';
   		$html.='<label>';
     	$html.='Image:';

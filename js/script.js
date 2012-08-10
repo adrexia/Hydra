@@ -5,15 +5,19 @@
 
 		$('.flexslider').flexslider({
                         animation: "slide", 
-                        pauseOnHover: true, 
                         slideshowSpeed:10000, 
-                        pausePlay: true,           
-                        start: function(slider){
-                                $('body').removeClass('loading');
-                        }
+                        pausePlay: true,  
+                        pauseText: " ",
+                        playText: " ",         
+   
                 });
             
-                $('.flexslider').flexslider('play');
+            //   $('.flex-pauseplay a.flex-pause').addClass('icon-pause');
+             //  $('.flex-pauseplay a.flex-play').addClass('icon-play');
+                
+                
+                
+                                   
 					
 		$('li.set').append('<div class="triangle"></div>');
 		$('tr th:first').addClass('first');

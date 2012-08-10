@@ -1,4 +1,4 @@
-@import "font-awesome";
+
 @import "_include";
 @import "_plugins";
 @import 'typography';
@@ -334,6 +334,7 @@ h3{
       height:30px;    
       text-indent:5px;
       width:100%;
+      margin-top:5px;
   }
   :-placeholder {  
       font-size:1em;
@@ -358,7 +359,7 @@ h3{
       font-weight:bold; 
       line-height:30px;
       height:30px;
-      padding-top:5px;
+      padding-top:0px;
   }
   
   :-moz-placeholder {  
@@ -372,6 +373,7 @@ h3{
       line-height:30px;
       height:30px;
       padding-top:5px;
+      padding-bottom:5px;
   }  
   
   :-o-placeholder {  
@@ -425,9 +427,10 @@ input{
     line-height:30px;
   height:30px;
   font-size:1em;
-  
+  @include roundAllCorners(2px);
   &[type=search]{
     @include roundAllCorners(2px);
+    
   }
   
   &:focus {
@@ -446,6 +449,15 @@ ul#searchForm li{
 }
 ul#searchForm{
   margin:20px 8%; 
+  input{
+      &:focus {
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.4);
+    outline: 0;
+    
+  }
+  }
+  
 }
 
 ul.rightNav {
@@ -598,7 +610,6 @@ h3 a, h3 a:link, h3 a:visited, h3 a:active, h3 a:hover {
   margin: 0;
   padding-bottom: 10px;
   width: 600px;
-  overflow: hidden;
   border-bottom: 1px solid #ccc;  
 }
 

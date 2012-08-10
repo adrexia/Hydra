@@ -107,7 +107,7 @@ class News extends View{
 		$html.='<input type="hidden" name="newsID" value="'.$newsID.'" id="newsID" />'."\n";	
 		$html.='<div class="h3"><h3>'."\n";	
 		$html.='<label class="hidden" for="newsTitle">Title: </label>'."\n";	
-		$html.='<input type="text" name="newsTitle" placeholder="News Title" value="'.htmlentities(stripslashes($newsTitle)).'" id="newsTitle" />'."\n";	
+		$html.='<input type="text" name="newsTitle" placeholder="Headline" value="'.htmlentities(stripslashes($newsTitle)).'" id="newsTitle" />'."\n";	
 		$html.='</h3></div>'."\n";	
 		$html.=$this->displayEdit();
 		$html.='<textarea name="newsText" id="pageContent">'.$this->model->stripHTMLTags(stripslashes($newsText)).'</textarea>'."\n";		

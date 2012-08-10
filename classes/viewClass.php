@@ -134,6 +134,7 @@ abstract class View{
 		$html.= '<title>'.$this->rs['pageTitle'].'</title>'."\n";
 		$html.= '</head>'."\n";
 		$html.= '<body>'."\n";
+        $html.='<!--code here/-->';
 		return $html;	
 	}//end displayHtmlHeader method
 	

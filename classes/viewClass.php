@@ -115,13 +115,9 @@ abstract class View{
 		
 		
 		$html.='<link rel="alternate" type="application/rss+xml" title="Hydra Feed" href="rss.xml" />'."\n";
-		$html.='<script src="js/jquery.js"></script>'."\n";
-		$html.='<script src="js/jquery.asmselect.js"></script>';		
-		$html.='<script src="js/impromptu.js"></script>'."\n";
-		$html.='<script src="cms/parser_rules/advanced.js"></script>';
-		$html.='<script src="cms/dist/wysihtml5-0.3.0.min.js"></script>';	
-		$html.='<script src="js/script.js"></script>'."\n";
-                $html.='<script src="js/cms.js"></script>'."\n";
+		
+                
+             
 		
 		$pageName=$_GET['pageName'];
 		if($pageName=='register'||$pageName=='submitGame'||$_GET['action']=='edit'){
@@ -142,7 +138,7 @@ abstract class View{
 		
 	public function displayEdit(){
 		$html='<div id="wysihtml5-toolbar" style="display: none;">';
-		$html.='<a data-wysihtml5-command="bold"><strong>T</strong></a>';
+		$html.='<a class="icon-bold" data-wysihtml5-command="bold"></a>';
 		$html.='<a data-wysihtml5-command="italic"><em>T</em></a>';	  
 		$html.='<a data-wysihtml5-command="createLink">K</a>';
 		$html.='<div data-wysihtml5-dialog="createLink" style="display: none;">';
@@ -166,19 +162,7 @@ abstract class View{
   		$html.='</label>';
   		$html.='<a data-wysihtml5-dialog-action="save" class="plainFont">OK</a>';
   		$html.='<a data-wysihtml5-dialog-action="cancel" class="plainFont">Cancel</a>';
-		$html.='</div>';
-		
-		//		$html.='<a data-wysihtml5-command="justifyLeft">n</a>';
-		//$html.='<a data-wysihtml5-command="justifyCenter">`</a>';
-		//$html.='<a data-wysihtml5-command="justifyRight">o</a>';
-		
-		
-		
-		
-		
-		
-		
-		
+		$html.='</div>';		
 		$html.='</div>';
 			
 		return $html;
@@ -295,13 +279,23 @@ abstract class View{
 			 echo "$value<br />\n";
 			 }
 		
-		}
-		
-		$randomImage=rand(1, $value);
+		}		
+		//$randomImage=rand(1, $value);	
+	
 		$html='<div id="bannorImage">'."\n";
-		$html.='<img style="border-width: 0px;" src="images/header/'.$randomImage.'.jpg" alt="Larp"  />'."\n";
-		$html.='</div>'."\n";
-		return $html;		
+                $html.='<div class="flexslider" id="slider">';
+                $html.='<ul class="slides">';
+                foreach($file as $key => $value){
+                    if($value != '.' && $value != '..'){  
+                        $html.='<li>';
+                        $html.='<img style="border-width: 0px;" src="images/header/'.$value.'" alt="Larp"  />'."\n";
+                        $html.='</li>';
+                    }
+               }
+               $html.='</ul>';
+               $html.='</div>';		
+	       $html.='</div>'."\n";
+	       return $html;		
 	}//end displayHeaderContent method
 	
 	
@@ -322,7 +316,15 @@ abstract class View{
 			$html.='</ul>'."\n";
 			$html.='</div>'."\n";
 			$html.='</div>'."\n";
-			$html.='</div>'."\n";
+			$html.='</div>'."\n";    
+                        $html.='<script src="js/jquery.js"></script>'."\n";
+                        $html.='<script src="js/jquery.asmselect.js"></script>';                
+                        $html.='<script src="js/impromptu.js"></script>'."\n";
+                        $html.='<script src="cms/parser_rules/advanced.js"></script>';
+                        $html.='<script src="cms/dist/wysihtml5-0.3.0.min.js"></script>';
+                        $html.='<script src="js/jquery.flexslider.js"></script>'."\n";  
+                        $html.='<script src="js/script.js"></script>'."\n";
+                        $html.='<script src="js/cms.js"></script>'."\n";
 			$html.='</body>'."\n";
 			$html.='</html>'."\n";
 		return $html;

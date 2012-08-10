@@ -1,13 +1,14 @@
+@import "font-awesome";
 @import "_include";
 @import "_plugins";
 @import 'typography';
+@import 'flexslider';
 
 
 
 
 
 /*********************************
-General rules
 **********************************/
 body {
   font-family: helvetica, arial, verdana, sans-serif;
@@ -167,21 +168,13 @@ div#banner {
 
 div#bannorImage {
   width: 800px;
- // background-color: rgba(30, 8, 63, 0.2);
-  background-color: rgba(darken($mainColor,15%), 0.2);
-  border-top: 2px solid rgba(darken($mainColor,15%), 0.3);
-  border-bottom: 2px solid rgba(darken($mainColor,15%), 0.3);
-  border-left: 2px solid rgba(darken($mainColor,1%), 0.7);
   border-right: 2px solid rgba(darken($mainColor,1%), 0.7);
-  height: 200px;
-  overflow: hidden;
   margin: -50px auto 0px auto;
-  text-align: center;  
-  @include roundAllCorners(4px);
 }
 
 div#bannorImage img {
   margin-top: -50px;  
+  
 }
 
 div.mainContent {
@@ -788,7 +781,7 @@ h2#adminNav {
   top: -30px;
   left: 20px;
   @include background(
-      url(../images/texture5.png) top left repeat    
+     lighten($mainColor, 50%) url(../images/texture5.png) top left repeat    
     );
   width: 100px;
   padding: 5px;

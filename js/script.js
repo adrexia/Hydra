@@ -3,7 +3,17 @@
    		var object=null;
 		var request = null;		
 
-		
+		$('.flexslider').flexslider({
+                        animation: "slide", 
+                        pauseOnHover: true, 
+                        slideshowSpeed:10000, 
+                        pausePlay: true,           
+                        start: function(slider){
+                                $('body').removeClass('loading');
+                        }
+                });
+            
+                $('.flexslider').flexslider('play');
 					
 		$('li.set').append('<div class="triangle"></div>');
 		$('tr th:first').addClass('first');

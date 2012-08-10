@@ -17,17 +17,20 @@ Embedding fonts
 
 @font-face{ 
   font-family: 'WebSymbolsRegular';
-  src: url('../fonts/websymbols-regular-webfont.eot');
-  src: url('../fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/websymbols-regular-webfont.woff') format('woff'),
-       url('../fonts/websymbols-regular-webfont.ttf') format('truetype'),
-       url('../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+  src: url('fonts/websymbols-regular-webfont.eot');
+  src: url('fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/websymbols-regular-webfont.woff') format('woff'),
+       url('fonts/websymbols-regular-webfont.ttf') format('truetype'),
+       url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
   }
 
 @font-face {
   font-family: 'RomanCapsRegular';
-  src: url("../fonts/roman_sd-webfont.eot");
-  src: url("../fonts/roman_sd-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roman_sd-webfont.woff") format("woff"), url("../fonts/roman_sd-webfont.ttf") format("truetype"), url("../fonts/roman_sd-webfont.svg#RomanCapsRegular") format("svg");
+  src: url("fonts/roman_sd-webfont.eot");
+  src: url("fonts/roman_sd-webfont.eot?#iefix") format("embedded-opentype"), 
+  url("fonts/roman_sd-webfont.woff") format("woff"), 
+  url("fonts/roman_sd-webfont.ttf") format("truetype"), 
+  url("fonts/roman_sd-webfont.svg#RomanCapsRegular") format("svg");
   font-weight: normal;
   font-style: normal; 
  }
@@ -35,7 +38,7 @@ Embedding fonts
 
 @font-face {
   font-family: SRomanSD;
-  src: url("../fonts/RomanSD.ttf");
+  src: url("fonts/RomanSD.ttf");
   /* TTF file for CSS3 friendly browsers */ 
 }
 
@@ -43,14 +46,14 @@ Embedding fonts
 @font-face {
   font-family: FFRomanSD;
   /*create font name*/
-  src: url("../fonts/RomanSD.ttf") format("truetype");
+  src: url("fonts/RomanSD.ttf") format("truetype");
   /*Firefox likes format:truetype*/
 }
 
 
 @font-face {
   font-family: IERomanSD;
-  src: url("../fonts/RomanSD.eot"); 
+  src: url("fonts/RomanSD.eot"); 
 }
 
 

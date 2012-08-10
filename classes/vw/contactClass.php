@@ -18,7 +18,7 @@ class Contact extends View{
 			  $result=$this->model->processMail();
 			  $this->msg=$result['msg'];
 		  }
-		  $html.=$this->displayRightContent();
+		 
 		  $html.='<div class="left">';	 
 		  if($this->msg=="Success"){
 			  $html.=$this->mailSent();			
@@ -28,6 +28,8 @@ class Contact extends View{
 			  $html.=$this->showForm();
 			  $html.='</div>'."\n";	
 		  }
+                   $html.='</div>'."\n"; 
+		  $html.=$this->displayRightContent();
 		  $html.='<div class="clear"></div>'."\n";
 		  $html.='</div>'."\n";  
 		  return $html;

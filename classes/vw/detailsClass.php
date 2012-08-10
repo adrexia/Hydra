@@ -6,7 +6,7 @@
 ******************************************************************************/
 class Details extends View{
 	private $allow;
-   private $generated;
+	private $generated;
 	private $model;
 	private $msg;
 	
@@ -20,8 +20,8 @@ class Details extends View{
 		}	
       $this->generated=new Generate();
 		$this->model=new Model();    
-		$html.=$this->displayRightContent();
 		$html.=$this->displayLeftContent();
+		$html.=$this->displayRightContent();		
 		return $html;
 	}//end displayContent
 	
@@ -95,15 +95,16 @@ class Details extends View{
 		$rs=$this->generated->getPage($_GET['pageName']);
 		$content=$rs['pageContent'];
 		$content=$this->generated->stripHTMLTags($content);
-	 	  $html.='<p class="note"><em>Note: You can use &lt;h3&gt; tags for headings,  &lt;b&gt; tags to make text bold, &lt;i&gt; tags to italicize text, and &lt;a&gt; tags for links</em></p>'."\n";
+	 	//  $html.='<p class="note"><em>Note: You can use &lt;h3&gt; tags for headings,  &lt;b&gt; tags to make text bold, &lt;i&gt; tags to italicize text, and &lt;a&gt; tags for links</em></p>'."\n";
 		//Form goes here
 		$html.='<div class="pageForm">'."\n";
 		$html.='<form action="'.$_SERVER['REQUEST_URI'].'" method="post" id="form" />'."\n";
-		$html.='<p><textarea name="pageContent" id="pageContent">'.$content.'</textarea></p>'."\n";
+		$html.=$this->displayEdit();
+		$html.='<textarea name="pageContent" id="pageContent">'.$content.'</textarea>'."\n";
 		$html.='<p class="newsSubmit"><input type="submit" name="cancel" value="Cancel" id="newsCancel">'."\n";
 		$html.='<input type="submit" name="details" value="Update" id="detailsPost"></p>'."\n";
 		$html.='</form>'."\n";
-   	$html.='</div>'."\n";
+   		$html.='</div>'."\n";
 		return $html;
 	}
 	
@@ -122,6 +123,7 @@ class Details extends View{
 			$html.='</div>';*/
 	
 			$html.='</div> <!-- end right div /-->'."\n";
+			$html.='<div class="clear"></div>';	
 			return $html;
 	}//end displayRightBox	
 

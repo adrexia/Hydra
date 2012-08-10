@@ -1,4 +1,57 @@
-@import "compass"; //for IE9 SVG gradient support
+@import "compass/css3/images";
+
+
+ 
+///* experiments in color
+$mainColor:darken(mix(#EB3744,#79439A,13%), 20%); 
+$links: $mainColor; 
+$lightLinks:lighten(mix($mainColor,#8e6c39, 40%),45%);  
+$visitedLinks: mix($mainColor,#8e6c39, 40%);
+$headingColor: lighten($mainColor,2%);
+$headingColorLink: $headingColor;
+
+/************************************************
+Embedding fonts
+************************************************/
+
+@font-face{ 
+  font-family: 'WebSymbolsRegular';
+  src: url('../fonts/websymbols-regular-webfont.eot');
+  src: url('../fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/websymbols-regular-webfont.woff') format('woff'),
+       url('../fonts/websymbols-regular-webfont.ttf') format('truetype'),
+       url('../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+  }
+
+@font-face {
+  font-family: 'RomanCapsRegular';
+  src: url("../fonts/roman_sd-webfont.eot");
+  src: url("../fonts/roman_sd-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roman_sd-webfont.woff") format("woff"), url("../fonts/roman_sd-webfont.ttf") format("truetype"), url("../fonts/roman_sd-webfont.svg#RomanCapsRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; 
+ }
+
+
+@font-face {
+  font-family: SRomanSD;
+  src: url("../fonts/RomanSD.ttf");
+  /* TTF file for CSS3 friendly browsers */ 
+}
+
+
+@font-face {
+  font-family: FFRomanSD;
+  /*create font name*/
+  src: url("../fonts/RomanSD.ttf") format("truetype");
+  /*Firefox likes format:truetype*/
+}
+
+
+@font-face {
+  font-family: IERomanSD;
+  src: url("../fonts/RomanSD.eot"); 
+}
+
 
 //________________________________________________________
 //  Custom Mixins not project specific (can be re-used elsewhere)
@@ -116,6 +169,18 @@
 	*:first-child &{ zoom:1;}
 }
 
+
+@mixin clearBoth{
+  &:before{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  *:first-child &{ zoom:1;}
+}
+
 //Mixin to create a regular box shadow
 @mixin boxShadow($horizontal, $vertical, $blur, $spread, $color){
 	-webkit-box-shadow: $horizontal $vertical $blur $spread $color;
@@ -161,6 +226,12 @@
 	-moz-border-radius-bottomleft: $bottomLeft;
 	-webkit-border-radius: $topLeft $topRight $bottomRight $bottomLeft;
 	border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+}
+
+@mixin border-box{
+	-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
 }
 
 //Links within links: 

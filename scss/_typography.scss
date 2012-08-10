@@ -1,0 +1,114 @@
+
+a {
+  color: $links;
+  text-decoration: none; 
+  &:visited {
+    color: $visitedLinks;
+    text-decoration: none; 
+  }
+  &:hover, &:active{
+    color: $visitedLinks;
+    text-decoration: underline; 
+  }  
+}
+
+h3.inline, p.inline {
+  display: inline; 
+}
+
+p, br{
+  margin: 1em 0;
+}
+/*************************************
+Headings
+**************************************/
+.h2 {
+  width: 150px;
+  background-color: #000000;
+  color: #ffffff;
+  height: 30px;
+  text-align: center; 
+  @include roundTopCorners(3px);
+}
+
+.h2 h2, .pageHeading h2 {
+  padding-top: 8px;
+  font-variant: small-caps;
+  font-weight: normal;
+  font-family: Times, serif;
+  font-size: 1.1em; 
+}
+
+.pageHeading {
+  position: relative;
+  top: 0px;
+  width: 150px;
+  background-color: #000000;
+  color: #ffffff;
+  height: 30px;
+  text-align: center; 
+  @include roundBottomCorners(3px);
+}
+
+.right .h2 {
+  width: 100%;  
+}
+
+.mainContent .h2 {
+  margin: 0;  
+}
+
+.bold {
+  font-weight: bold; 
+ }
+
+.italic {
+  font-style: italic;
+}
+
+.unem {
+  font-weight: normal;
+  font-style: normal; 
+}
+
+.alignRight {
+  float: right; 
+}
+
+.centre {
+  margin: 0px auto 40px auto;
+  text-align: center; 
+}
+.centreText{
+  text-align:center;
+}
+
+span.left {
+  float: left; 
+}
+
+.left{
+  ul li {
+    list-style: disc outside;
+  }
+  
+  ol li {
+    list-style: decimal outside;
+  }
+  
+  li {
+    margin-left: 30px;
+  }
+  
+  li {
+    line-height: 1.5;
+  }
+  
+  ul, ol {
+    @include clearBoth;
+    padding-bottom: 25px;
+    display:block;
+    margin-top:20px;
+  }
+
+}

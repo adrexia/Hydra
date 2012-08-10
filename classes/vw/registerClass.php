@@ -92,16 +92,19 @@ class Register extends View{
 					 //if logged in user has registered, go to game selection
 					 $html.=$this->displayGamesReg();		
 				}elseif($_SESSION['userID']&&$_GET['action']=='userDelete'){ //if user has chosen to delete their account	  
-					 $html.=$this->displayRightContent();
+					 
 					 $html.='<div class="left">'."\n".'<div class="post">'."\n";			
 					 $html.=$this->deleteAccount();
-					 $html.='</div><!-- end left div /-->'."\n".'<div class="clear"></div>'."\n";
+					 $html.='</div><!-- end left div /-->'."\n";
+					 $html.=$this->displayRightContent();
+					 $html.='<div class="clear"></div>'."\n";
 					 $html.='</div>'."\n";	
 				}else{	//if first form needs to be filled in/edited	  
-					 $html.=$this->displayRightContent();
+					 
 					 $html.='<div class="left">'."\n".'<div class="post">'."\n";			
 					 $html.=$this->handleForms();
 					 $html.='</div>'."\n".'</div>'."\n";	
+					 $html.=$this->displayRightContent();
 					 $html.="\n".'<div class="clear"></div>'."\n";
 							
 				}
@@ -508,7 +511,7 @@ class Register extends View{
 	  * for users with no games, or for those editing games
 	  ********************************************************************/
 	 private function displayGamesReg(){
-		  $html=$this->displayRightContent();
+		 
 		  $html.='<div class="left">'."\n";
 		  $html.='<div class="post">'."\n";
 		  $html.='<div class="pageContent">'."\n";
@@ -516,18 +519,19 @@ class Register extends View{
 		  		  //$pageDetails=$this->model->getPageContent('register');
 		  $pageDetails="Game Selection is now open! Choose your games below. Please supply 2 choices for each round.";
 		  
-		/* if(!$_GET['live']==true){
+		 if(!$_GET['live']==true){
 			  $html.='<p class="note">Games selection is not yet live. ';
 			  $html.='We will send you an email when we have enough games to open up ';
 			  $html.='this section of the registration process. Remember your username and password, so you can log back in.<br />';
 			  $html.=' Thanks!</p>'; 
-		  }else{*/
+		  }else{
 		 	 $html.='<p class="space">'.$pageDetails.'</p>'."\n";
 			 $html.=$this->gameSelection(); //game selection
-	//	}
-		  $html.='</div><!-- end left div /-->'."\n";			
+		    }
+		  $html.='</div></div></div><!-- end left div /-->'."\n";	
+		  $html.=$this->displayRightContent();		
 		  $html.='<div class="clear"></div>'."\n";
-		  $html.='</div></div>'."\n";
+		  $html.='</div>'."\n";
 		  return $html;
 	 }//end displayGamesReg	
 	 
@@ -559,7 +563,7 @@ class Register extends View{
 	 *stages of registration: user creationb, reg, and game selection
 	 ************************************************************************/
     private function displayCompletedReg(){
-		  $html.=$this->displayRightContent();
+		  
 		  $html.='<div class="left"><div class="post">'; 
 		  $html.=$this->displayUserInfo();	  	 
 		  $html.=$this->displayUserReg();	 //display User Registration
@@ -573,9 +577,11 @@ class Register extends View{
 		  //$html.='| <a href="index.php?pageName=register&amp;action=deleteUserGames">Remove All</a>';
 		  $html.='</div>'."\n";	//end footer div
 		  $html.='<div class="space"></div>'."\n";
-		  $html.='</div><!-- end left div /-->';			
+		  $html.='</div><!-- end left div /-->';
+                    $html.='</div></div>'."\n";  	
+		  $html.=$this->displayRightContent();		
 		  $html.='<div class="clear"></div>'."\n";
-		  $html.='</div></div></div>'."\n";  
+		
 		  return $html;
     }//end displayCompletedReg
 	

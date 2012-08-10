@@ -80,7 +80,7 @@ class Generate extends DataBase
 		$html.='<div class="rightContent">'."\n";
 		$html.='<form action="index.php?pageName=search" method="post" id="sForm">'."\n";//search form
 		$html.='<ul id="searchForm">'."\n";
-		$html.='<li><input type="text" id="searchTerm" name="searchTerm" value="" /></li>'."\n";
+		$html.='<li><input type="search" id="searchTerm" name="searchTerm" value="" /></li>'."\n";
 		$html.='<li><input type="submit" value="go" name="search" id="searchSubmit" /></li>'."\n";
 		$html.='</ul>'."\n";
 		$html.='</form>'."\n";

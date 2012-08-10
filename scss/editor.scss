@@ -1,0 +1,362 @@
+@import "_include";
+@import 'typography';
+
+html {
+  background: transparent;
+}
+
+body {
+  padding:0 10px !important;
+  font-family: Helvetica, Arial, Verdana !important;
+  font-size:14px !important;
+  margin-bottom:-20px;
+}
+
+h3,h4{
+  padding-top:20px !important;
+  margin:0;
+  margin-bottom:5px;
+}
+p{
+  margin:20px 0;
+}
+
+.wysiwyg-color-black {
+  color: black;
+}
+
+.wysiwyg-color-silver {
+  color: silver;
+}
+
+.wysiwyg-color-gray {
+  color: gray;
+}
+
+.wysiwyg-color-white {
+  color: white;
+}
+
+.wysiwyg-color-maroon {
+  color: maroon;
+}
+
+.wysiwyg-color-red {
+  color: red;
+}
+
+.wysiwyg-color-purple {
+  color: purple;
+}
+
+.wysiwyg-color-fuchsia {
+  color: fuchsia;
+}
+
+.wysiwyg-color-green {
+  color: green;
+}
+
+.wysiwyg-color-lime {
+  color: lime;
+}
+
+.wysiwyg-color-olive {
+  color: olive;
+}
+
+.wysiwyg-color-yellow {
+  color: yellow;
+}
+
+.wysiwyg-color-navy {
+  color: navy;
+}
+
+.wysiwyg-color-blue {
+  color: blue;
+}
+
+.wysiwyg-color-teal {
+  color: teal;
+}
+
+.wysiwyg-color-aqua {
+  color: aqua;
+}
+
+
+/*************************************
+Headings
+**************************************/
+.h2 {
+  width: 150px;
+  background-color: #000000;
+  color: #ffffff;
+  height: 30px;
+  text-align: center; 
+}
+
+.h2 h2, .pageHeading h2 {
+  padding-top: 8px;
+  font-variant: small-caps;
+  font-weight: normal;
+  font-family: Times, serif;
+  font-size: 1.1em; 
+}
+
+.pageHeading {
+  position: relative;
+  top: 0px;
+  width: 150px;
+  background-color: #000000;
+  color: #ffffff;
+  height: 30px;
+  text-align: center; 
+}
+
+.right .h2 {
+  width: 200px;  
+}
+
+.mainContent .h2 {
+  margin: 0;  
+}
+
+div#banner h1, div#banner h2 {
+  font-family: RomanCapsRegular, SRomanSD, FFRomanSD, IERomanSD, serif;
+  font-smooth: always;
+  font-stretch: wider;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.496);
+  filter: dropshadow(color = white, offx = 1, offy = 0);
+  -webkit-font-smoothing: antialiased;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=hIEfix.png,sizingMethod=crop);
+  zoom: 1;  
+}
+
+h3, h4 {
+  display: inline;
+  font-size: 1.3em;
+  color:darken($mainColor,13%);
+  font-variant: small-caps;
+  padding-bottom: 10px;
+  font-family: Times, serif;  
+}
+
+h4 {
+  /*reset size attribute*/
+  font-size: 1em; 
+  
+}
+
+h5{
+  color:#727272;
+  margin-bottom:5px;
+  }
+
+h3 a, h3 a:link, h3 a:visited, h3 a:active, h3 a:hover {
+  color:darken($mainColor,13%);
+  text-decoration: none;  
+}
+
+h3, h4 {
+  display:block;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;  
+}
+
+h4 {
+  padding-bottom: 5px;
+  margin-top: 20px;  
+}
+
+.pageForm textarea h3 {
+  font-weight: bold;  
+}
+
+/*.pageContent h3{
+font-size:1.3em;
+}*/
+#pageNav h5, .pageNav h5 {
+  padding-top: 15px;
+  margin-left: 10px;
+  font-variant: small-caps;
+  font-family: Times, serif;  
+}
+
+#pageNav h5.gameHeading, .pageNav h5.gameHeading {
+  margin-left: 0px;
+  font-size: 1.1em;  
+}
+
+div#extraInfo img {
+  z-index: 500;
+  position: relative;
+  top: 0px;
+  vertical-align: middle;  
+}
+
+div#extraInfo {
+  margin-top: -80px;
+  position: relative;
+  top: 50px;
+  text-align: center;
+  font-family: RomanCapsRegular, SRomanSD, FFRomanSD, IERomanSD, serif;
+  font-smooth: always;
+  font-stretch: wider;
+  -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.496);
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+  filter: dropshadow(color = white, offx = 1, offy = 0);
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  color: #ffffff;
+  overflow: hidden;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=hIEfix.png,sizingMethod=crop);
+  zoom: 1;  
+}
+
+div#titleText {
+  /*HYDRA &bull;  */
+  float: left;
+  font-size: 3em;  
+}
+
+div#title {
+  margin-bottom: 100px;  
+}
+
+div#titleText h1 {
+  padding-right: 10px;  
+}
+
+div#subTitleText {
+  /*Live Action Roleplaying Convention*/
+  padding-top: 15px;
+  font-size: 1.2em;  
+}
+
+div#subTitleText h2 {
+  padding-left: 30px;  
+}
+
+div#titleText h1, div#subTitleText h2 {
+  display: inline;  
+}
+ 
+
+h4.profileH, p.error {
+  position: absolute;
+  top: -30px;
+  text-align: right;
+  width: 500px;  
+}
+
+.gameDetails h5 {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: #727272;  
+}
+
+.gameDetails h3 {
+  display: inline-block;
+  max-width: 490px;  
+}
+
+.search h5 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: #727272;  
+}
+
+#commentForm h5 {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+  margin-top: 20px;
+  color: #ffffff;  
+}
+
+#commentError {
+  width: 300px;
+  font-size: 0.9em;
+  /*this needs to be small*/
+  float: right;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 150px;  
+}
+
+.leaveComment h5 {
+  margin: 0px;
+  background-color: #000000;
+  font-variant: small-caps;
+  font-weight: normal;
+  color: #ffffff;  
+}
+
+.h3Form {
+  clear: left;
+  margin: 0px;
+  padding: 0;
+  padding-bottom: 10px;
+  width: 600px;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;  
+}
+
+h5.pageTitle {
+  color: #838383;
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+  padding-top: 10px;
+  font-size: 1.1em;
+  /*First definition of h5.pageTitle size*/  
+}
+
+.commentTitle {
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #efefef;
+  margin: 0;
+  padding: 5px;
+  padding-left: 10px;
+  float: left;
+  background-color: #ffffff;
+  width: 535px;
+  font-variant: small-caps;
+  font-weight: normal;  
+}
+
+.commentTitle h5 {
+  padding: 10px;
+  //color: #260350;
+  color:darken($mainColor,13%);
+  font-size: 1.2em;
+  /*First definition of .commentTitle h5 size*/
+  font-family: Times, serif;
+  display: inline;  
+}
+
+h2#adminNav {
+  position: relative;
+  top: -50px;
+  left: 20px;
+  background-color: #2b2b2b;
+  width: 100px;
+  padding: 5px;
+  text-align: center;
+  font-size: 0.7em;
+  /*First Definition of adminNav size*/
+  border: 1px solid #838383;
+  border-top: none;  
+}
+
+h2#adminNav a {
+  color: #ffffff;  
+}
+
+div.pageInfo .h3 {
+  width: 560px;  
+}

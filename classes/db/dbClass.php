@@ -100,7 +100,7 @@ class Database{
    ****************************************************************************************/
    public function stripHTMLTags($items){   
       
-         $items=strip_tags($items,'<p><a><img><b><i><em></strong><h3><h4>'); 
+         $items=strip_tags($items,'<p><a><img><b><i><em></strong><h3><h4><ul><ol><li>'); 
     
       return $items;
    }//end stripHTMLTags

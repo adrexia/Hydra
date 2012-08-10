@@ -27,9 +27,16 @@ class Game extends View{
 		}elseif($statusBool){
 			$this->allow=true;			
 		}
-		$html.=$this->displayRightContent();		
+				
 		$html.=$this->displayLeftContent();
-		
+		$html.=$this->displayRightContent();
+           
+                $html.=$this->displayComments();        
+                        if($_GET['action']!='edit'&&$_GET['action']!='delete'){                 
+                                $html.=$this->showCommentForm();
+                        }
+                $html.='</div>'."\n";
+                $html.='</div>'."\n";//end left
 		return $html;
 	}//end displayContent
 	
@@ -69,17 +76,15 @@ class Game extends View{
 			$html='<div class="left"><div class="post"><div class="pageContent">'."\n";
 			$larp=$this->generated->getGameFromID($_GET['gameID']);
 			$html.=$this->generated->showGame($larp);			
-			$html.=$this->displayComments();	
-			if($_GET['action']!='edit'&&$_GET['action']!='delete'){			
-				$html.=$this->showCommentForm();
-			}
-			$html.='<div class="clear"></div>'."\n";
+			
+			
 			$html.='</div>'."\n";//end post
+			$html.='</div>'."\n";//end left
 			$html.='</div>'."\n";//end left
 		}else{
 			$html.='<p class="note">This game does not exist, or is not public. Please visit the <a href="index.php?pageName=games">games</a> page for a list of the current games</p>'."\n";
 			$html.='<br />'."\n";
-			$html.='<div class="clear"></div>'."\n";
+			
 		}		
    	return $html;
 	}//end displayLeftContent
@@ -171,7 +176,7 @@ class Game extends View{
 	
 	/*Method to display the right content*/
 	private function displayRightContent(){
-		$html='<div class="right cleared">'."\n";
+		$html='<div class="right">'."\n";
 		$html.=$this->generated->displaySearchBox();	
 		$html.='<div id="pageNav">'."\n";
 		$html.='<div class="h2"><h2>Roster of Games</h2></div>'."\n";
@@ -180,6 +185,7 @@ class Game extends View{
 		$html.='</div>'."\n";
 		$html.='</div>'."\n";		
 		$html.='</div> <!-- end right div /-->'."\n";
+		$html.='<div class="clear"></div>'."\n";
 		return $html;
 	}//end displayRightBox	
 

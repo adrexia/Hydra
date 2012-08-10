@@ -26,14 +26,15 @@ class Login extends View{
 	
 	/*Method to display the content of the page*/
 	protected function displayContent(){
-		$html.=$this->displayRightContent();
+		
 		$html.='<div class="left"><div class="post"><div class="pageContent">';		
 		if($this->result['message']){
 			$html.= $this->result['message'];
 		}else if(!$_SESSION['userName']||$this->result['logout']){
 			$html.=$this->loginForm();
 		}		
-		$html.='</div><!-- end left div /-->';			
+		$html.='</div><!-- end left div /-->';	
+		$html.=$this->displayRightContent();		
 		$html.='<div class="clear"></div>'."\n";
 		$html.='</div>'."\n";	
 		return $html;

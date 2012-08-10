@@ -11,8 +11,9 @@ class Sitemap extends View{
 	protected function displayContent(){
 		$this->model=new Model();
 		$this->generated=new Generate();
-		$html.=$this->displayRightContent();		
+				
 		$html.=$this->displayLeftContent();	
+		$html.=$this->displayRightContent();
 		return $html;
 	}//end displayContent
 	
@@ -24,7 +25,7 @@ class Sitemap extends View{
 		$html.='<ul class="sitemap">'."\n";
 		$html.=$this->displaySiteMap();
 		$html.='</ul>'."\n";
-		$html.='<div class="clear"></div>';
+	
 		$html.='</div>';
 		return $html;
 	}//end displayLeftContent	
@@ -45,7 +46,8 @@ class Sitemap extends View{
 			$html.='</div>';*/
 		
 			$html.='</div> <!-- end right div /-->';
-			return $html;		
+			$html.='<div class="clear"></div>';
+		
 		return $html;
 	}//end display right content
 	

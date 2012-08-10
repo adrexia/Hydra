@@ -11,13 +11,16 @@ class Search extends View{
     /*Main, and required, method for the search view class*/ 
 	 protected function displayContent(){
 		  $this->generated=new Generate();
-		  $html.=$this->displayRightContent();
+		 
 		  if($_POST['search']&&$_POST['searchTerm']!=null){    
 			  $html.=$this->displaySearch($_POST['searchTerm']);         
 		  }else{
 			  $html.=$this->displayEmptySearch();         
-		  }  
-		  $html.="</div>";
+		  }
+		  $html.="</div>";  
+		  $html.=$this->displayRightContent();
+		  $html.='<div class="clear"></div>';
+		 
 		  return $html;
 	 }//end displayContent
    

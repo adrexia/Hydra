@@ -60,9 +60,10 @@ abstract class View{
 		$html='<div class="mainContent">'."\n";
 		$html.='<div class="wrap">'."\n";
 		$html.='<div class="pageHeading"><h2>'.$this->rs['pageHeading'].'</h2></div>'."\n";		
-		$html.='<div id="breadcrumbs"><div class="bCrumbs">'.$breadcrumbs.'</div></div>'."\n";
-		$html.='<div id="clear"></div>'."\n";
+		$html.='<div id="breadcrumbs"><div class="bCrumbs">'.$breadcrumbs.'</div></div>'."\n";		
+		$html.='<div class="content">';
 		$html.=$this->displayContent();
+		$html.='</div>';
 		$html.='</div><!---end wrap Div/-->'."\n";
 		$html.='</div><!---end mainContent Div/-->'."\n";
 		$html.='<div class="clear"></div>'."\n";
@@ -72,6 +73,7 @@ abstract class View{
 	/*Method is used by all other viewClasses*/
 	abstract protected function displayContent();	
 	
+
 	/***********************************************************************
 	 *Method runs all needed header methods:
 	 *html header, user navigation, banner
@@ -90,15 +92,17 @@ abstract class View{
 	 * Method generates the non-visual html for the header
 	 **********************************************************************/
 	private function displayHtmlHeader(){		
-		$html='<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">'."\n";
-		$html.='<html xmlns="http://www.w3.org/1999/xhtml">'."\n";
+		$html='<!doctype html">'."\n";
+		$html.='<html>'."\n";
 		$html.='<head>'."\n";
 		$html.='<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />'."\n";
 		$html.='<meta name="description" content="'.$this->rs['pageDescription'].'" />'."\n";
 		$html.='<meta name="keywords" content="'.$this->rs['pageKeywords'].'" />'."\n";
 		$html.='<meta name="author" content="Naomi Guyer, naomi.guyer@gmail.com" />'."\n";
 		$html.='<link rel="stylesheet" type="text/css" href="css/reset.css" media="" />'."\n";
+		$html.='<link rel="stylesheet" type="text/css" href="css/cmsMenu.css" media="" />'."\n";
 		$html.='<link rel="stylesheet" type="text/css" href="css/style.css" media="" />'."\n";
+		
 		$html.='<!--[if lt IE 7]>'."\n";
 		$html.='<link rel="stylesheet" type="text/css" href="css/ie.css" media="" />'."\n";
 		$html.='<![endif]-->'."\n";
@@ -112,9 +116,13 @@ abstract class View{
 		
 		$html.='<link rel="alternate" type="application/rss+xml" title="Hydra Feed" href="rss.xml" />'."\n";
 		$html.='<script src="js/jquery.js"></script>'."\n";
-		$html.='<script src="js/jquery.asmselect.js"></script>';
-		$html.='<script src="js/script.js"></script>'."\n";
+		$html.='<script src="js/jquery.asmselect.js"></script>';		
 		$html.='<script src="js/impromptu.js"></script>'."\n";
+		$html.='<script src="cms/parser_rules/advanced.js"></script>';
+		$html.='<script src="cms/dist/wysihtml5-0.3.0.min.js"></script>';	
+		$html.='<script src="js/script.js"></script>'."\n";
+                $html.='<script src="js/cms.js"></script>'."\n";
+		
 		$pageName=$_GET['pageName'];
 		if($pageName=='register'||$pageName=='submitGame'||$_GET['action']=='edit'){
 				//$html.='<script type="text/javascript" src="js/formValidation.js"></script>';
@@ -128,6 +136,53 @@ abstract class View{
 		$html.= '<body>'."\n";
 		return $html;	
 	}//end displayHtmlHeader method
+	
+	
+		
+	public function displayEdit(){
+		$html='<div id="wysihtml5-toolbar" style="display: none;">';
+		$html.='<a data-wysihtml5-command="bold"><strong>T</strong></a>';
+		$html.='<a data-wysihtml5-command="italic"><em>T</em></a>';	  
+		$html.='<a data-wysihtml5-command="createLink">K</a>';
+		$html.='<div data-wysihtml5-dialog="createLink" style="display: none;">';
+		$html.=' <label>';
+		$html.=' Link:';
+		$html.=' <input data-wysihtml5-dialog-field="href" value="http://" class="text">';
+		$html.=' </label>';	
+		$html.=' <a data-wysihtml5-dialog-action="save">OK</a> <a data-wysihtml5-dialog-action="cancel">Cancel</a>';
+		$html.='</div>';
+
+		$html.='<a data-wysihtml5-command="insertOrderedList">q</a>';
+		$html.='<a data-wysihtml5-command="insertUnorderedList">p</a>';
+		$html.='<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h3" class="plainFont">H3</a>';
+		$html.='<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h4" class="plainFont">H4</a>';
+		$html.='<a data-wysihtml5-action="change_view" title="Show HTML" class="action wysihtml5-action" href="javascript:;" unselectable="on">H</a>';
+		$html.='<a data-wysihtml5-command="insertImage">I</a>';
+		$html.='<div data-wysihtml5-dialog="insertImage" style="display: none;">';
+  		$html.='<label>';
+    	$html.='Image:';
+    	$html.='<input data-wysihtml5-dialog-field="src" value="http://">';
+  		$html.='</label>';
+  		$html.='<a data-wysihtml5-dialog-action="save" class="plainFont">OK</a>';
+  		$html.='<a data-wysihtml5-dialog-action="cancel" class="plainFont">Cancel</a>';
+		$html.='</div>';
+		
+		//		$html.='<a data-wysihtml5-command="justifyLeft">n</a>';
+		//$html.='<a data-wysihtml5-command="justifyCenter">`</a>';
+		//$html.='<a data-wysihtml5-command="justifyRight">o</a>';
+		
+		
+		
+		
+		
+		
+		
+		
+		$html.='</div>';
+			
+		return $html;
+	}
+	
 
 	
 	/*****************************************************************************
@@ -287,7 +342,7 @@ abstract class View{
 			}else{
 				$class="unset";
 			}
-			$html.='<li class="'.$class.'"><a href="index.php?pageName='.$pageNameArray[$i].'">'.$linkNameArray[$i].'</a></li>'."\n";
+			$html.='<li class="'.$class.'"><a class="'.$pageNameArray[$i].'" href="index.php?pageName='.$pageNameArray[$i].'">'.$linkNameArray[$i].'</a></li>'."\n";
 			if($i<$numLinks-1){ //if not the final link add divider
 				$html.=' <li>&bull;</li>'."\n"; 
 			}

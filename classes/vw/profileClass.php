@@ -25,7 +25,7 @@ class Profile extends View{
 		$this->generated=new Generate();
 		$this->model=new Model();
 		$this->userName=$this->model->getUserFromID($_GET['userID']);
-		$html.=$this->displayRightContent();	
+			
 		$html.='<div class="left">'."\n".'<div class="post">'."\n";
 		if($_POST['profileForm']){//process form			
 			$this->msg=$this->model->processProfile();
@@ -41,8 +41,10 @@ class Profile extends View{
 		}
 		$html.=$this->showGames();
 		$html.='</div>'."\n";//end post
-		$html.='<div class="clear"></div>'."\n";
 		$html.='</div>'."\n"; //end left		
+		$html.=$this->displayRightContent();
+		$html.='<div class="clear"></div>'."\n";
+		
    	return $html;
 	}//end display Content
 	

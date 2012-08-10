@@ -17,8 +17,8 @@ class About extends View{
 		}	
       $this->generated=new Generate();
 		$this->model=new Model();    
-		$html.=$this->displayRightContent();
 		$html.=$this->displayLeftContent();
+		$html.=$this->displayRightContent();		
 		return $html;
 	}//end display Content
 	
@@ -72,10 +72,13 @@ class About extends View{
 		$this->rs = $this->model->getPage($_GET['pageName']); 
 		$content=$this->rs['pageContent'];
 		$content=$this->generated->stripHTMLTags($content);	
-		$html.='<p class="note"><em>Note: You can use &lt;h3&gt; tags for headings,  &lt;b&gt; tags to make text bold, &lt;i&gt; tags to italicize text, and &lt;a&gt; tags for links</em></p>';
+		//$html.='<p class="note"><em>Note: You can use &lt;h3&gt; tags for headings,  &lt;b&gt; tags to make text bold, &lt;i&gt; tags to italicize text, and &lt;a&gt; tags for links</em></p>';
 		$html.='<div class="pageForm">';
+                
 		$html.='<form action="'.$_SERVER['REQUEST_URI'].'" method="post" id="cForm">';
-		$html.='<textarea rows="5" cols="50" name="pageContent" id="aboutText" />';
+		$html.=$this->displayEdit();
+                
+		$html.='<textarea rows="5" cols="50" name="pageContent" id="pageContent" />';
 		$html.=$content;
 		$html.='</textarea>';		
 		$html.='<p class="newsSubmit"><input type="submit" name="cancel" value="Cancel" id="newsCancel">';
@@ -140,6 +143,7 @@ class About extends View{
 		$html.='<p>Bad Dreams, Chimera 2010</p>';
 		$html.='</div>';*/
 		$html.='</div> <!-- end right div /-->';
+                $html.='<div class="clear"></div>';
 		return $html;
 	}//end displayRightBox	
 	

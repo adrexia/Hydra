@@ -62,9 +62,11 @@ class Admin extends View{
 						header('Location: index.php?pageName=admin');
 						exit;
 				}
-								   
-		  		$html=$this->displayRightContent();
-		  		$html.=$this->displayLeftContent();    
+				
+				$html.=$this->displayLeftContent();   				   
+		  		$html.=$this->displayRightContent();
+                                $html.='<div class="clear"></div>';
+		  		 
 			} 
 		}	
 		  return $html;
@@ -222,8 +224,8 @@ class Admin extends View{
 			$html.='<td class="email"><a href="mailto:'.$userEmail.'">'.$userEmail.'</a></td>';
 			$html.='<td class="details"><a href="#" class="button show noView" id="'.$userName.'">show</a></td>';
 			$html.='</tr>';
-			$html.='<tr class="hidden '.$userName.'"><td colspan="3">';
-			$html.='<ul class="gameList">';
+			$html.='<tr class="'.$userName.'"><td class="toggle" colspan="3">';
+			$html.='<ul class="gameList hidden">';
 			$html.='<li><span class="label">Membership:</span> '.$infoMemberShip.'</li>'; // infoMemberShip, infoAttend, infoAccom, infoPlayWith, infoNotPlayWith, infoTransport, infoFood, infoComments
 			$html.='<li><span class="label">Attending:</span>'.$infoAttend.'</li>';
 			$html.='<li><span class="label">Accommodation:</span>'.$infoAccom.'</li>';
@@ -309,9 +311,9 @@ class Admin extends View{
 			$html.='<td>'.$gameVenue.'</td>';			
 			$html.='<td class="details"><a href="#" class="button show noView">show</a></td>';
 			$html.='</tr>';
-			$html.='<tr class="admin hidden">';
-			$html.='<td colspan="6">';
-			$html.='<ul class="gameList wide">';
+			$html.='<tr class="admin">';
+			$html.='<td class="toggle" colspan="6">';
+			$html.='<ul class="gameList wide hidden">';
 			$html.='<li><h5>Description</h5> '.nl2br($this->generated->stripHTMLTags(stripslashes($gameDescription))).'</li>';
 			$html.='<li><span class="label">Genre</span> '.$gameGenre.'</li>';
 			$html.='<li><span class="label">Restriction</span> '.$gameRestriction.'</li>';

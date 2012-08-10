@@ -89,7 +89,7 @@ class SubmitGame extends View
 					 exit;					
 				}
 		  }else{//if form not submitted or has returned an error	
-				$html.=$this->displayRightContent();
+				
 				$html.='<div class="left"><div class="post">';
 				if($userRunningGame&!$_GET['gameID']&&$_GET['action']!="add"){		
 					 $html.=$this->displayGMGames();
@@ -101,11 +101,13 @@ class SubmitGame extends View
 					$html.=$this->addGame();//if newgame of game edit selected
 				}else{ 
 					$html.=$this->handleFinish();
-				}//end user session if/else				
+				}//end user session if/else		
+				 $html.='</div><!-- end left div /-->'."\n";			
+		 
+		  		$html.='</div>'."\n";	
+				$html.=$this->displayRightContent();		
 		  }
-		  $html.='</div><!-- end left div /-->'."\n";			
-		  $html.='<div class="clear"></div>'."\n";
-		  $html.='</div>'."\n";	
+		 
 		  return $html;
 	 }//end displayContent
 	 
@@ -353,6 +355,7 @@ class SubmitGame extends View
 		  $html.='<li>To add extra characters, you first need to increase the number of players in your Larp. To do this, Edit your Larp(#1) and change the "Number of Players" field. Once you have edited your Larp details, you will have as many character fields as the number you supplied. </li>'."\n";
 		  $html.='</ol>'."\n";	  
 		  $html.='</div>'."\n";	 
+                  $html.='<div class="clear"></div>';
 		  return $html;
 	 }//end displayGMInfo
 	
@@ -432,6 +435,7 @@ class SubmitGame extends View
 				$html.='</div>'."\n"; //end pageNav				
 		  }
 		  $html.='</div> <!-- end right div /-->'."\n";
+		  $html.='<div class="clear"></div>';	
 		  return $html;	 	  
 	 }//end display Right content	
 	

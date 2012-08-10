@@ -2,6 +2,7 @@
    $(document).ready(function(){
    		var object=null;
 		var request = null;		
+
 		
 					
 		$('li.set').append('<div class="triangle"></div>');
@@ -9,15 +10,17 @@
 	   
 		//Show and hide data in admin area
 		$('.show').click(function(){
-			var targetClass=$(this).parent().parent().next('tr');
+			var targetClass=$(this).closest('tr').next('tr').find('.gameList');
 			if($(this).text()=="show"){
 				$(this).removeClass('noView');
 				$(this).text("hide").addClass('view');
+				$(targetClass).slideDown("slow", 'linear');
 			}else{
 				$(this).removeClass('view');
 				$(this).text("show").addClass('noView');
+				$(targetClass).slideUp("slow", 'linear');
 			}
-			$(targetClass).toggle();
+			
 			
 			return false;
 		});   	
@@ -42,7 +45,7 @@
 		
 		function javascriptOn(){
 			$('a').attr('href', function(){
-				if($(this).attr('href').indexOf("js=true")==-1){
+				if($(this).attr('href')&&$(this).attr('href').indexOf("js=true")==-1){
 					$(this).attr('href',$(this).attr('href')+"&js=true");		
 				}	
 			});
@@ -88,6 +91,7 @@
 		});
 		
 		function getGameInfo(){
+			console.log(object);
 			var url=$(object).attr('href')+"&ran="+new Date().getTime();
 			request.open("GET", url, true);
 			request.onreadystatechange = handleGameInfo;
@@ -131,6 +135,12 @@
 			
 			return false;
 		}
+		
+		
+
+
+	
+
 		
 	});
 })(jQuery);

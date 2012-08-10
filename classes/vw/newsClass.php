@@ -16,8 +16,9 @@ class News extends View{
 		}		
 		$this->generated=new Generate();
 		$this->model=new Model();		
-		$html.=$this->displayRightContent();		
+			
 		$html.=$this->displayLeftContent();
+		$html.=$this->displayRightContent();	
 		return $html;
 	}//end displayContent
 	
@@ -99,7 +100,7 @@ class News extends View{
 			$newsID=0;
 		}
 		//Form starts here
-		$html.='<p class="note"><em>Note: You can use &lt;h3&gt; tags for headings,  &lt;b&gt; tags to make text bold, &lt;i&gt; tags to italicize text, and &lt;a&gt; tags for links</em></p>'."\n";		
+		//$html.='<p class="note"><em>Note: You can use &lt;h3&gt; tags for headings,  &lt;b&gt; tags to make text bold, &lt;i&gt; tags to italicize text, and &lt;a&gt; tags for links</em></p>'."\n";		
 		$html.='<div class="pageForm">'."\n";	
 		$html.='<form action="'.$_SERVER['REQUEST_URI'].'" method="post" id="form" />'."\n";
 		$html.='<input type="hidden" name="userID" value="'.$userID.'" id="userID" />'."\n";	
@@ -108,7 +109,8 @@ class News extends View{
 		$html.='<label for="newsTitle">Title: </label>'."\n";	
 		$html.='<input type="text" name="newsTitle" value="'.htmlentities(stripslashes($newsTitle)).'" id="newsTitle" />'."\n";	
 		$html.='</h3></div>'."\n";	
-		$html.='<p><textarea name="newsText" id="newsText">'.$this->model->stripHTMLTags(stripslashes($newsText)).'</textarea></p>'."\n";		
+		$html.=$this->displayEdit();
+		$html.='<textarea name="newsText" id="pageContent">'.$this->model->stripHTMLTags(stripslashes($newsText)).'</textarea>'."\n";		
 		$html.='<p class="newsSubmit"><input type="submit" name="cancel" value="Cancel" id="newsCancel"><input type="submit" name="news" value="Post" id="newsPost"></p>'."\n";
 		$html.='</form>'."\n";			
    	$html.='</div>'."\n";	
@@ -176,7 +178,8 @@ class News extends View{
 			$html.='</div>'."\n";	
 			$html.='</div>'."\n";	
 			
-			$html.='</div> <!-- end right div /-->'."\n";	
+			$html.='</div> <!-- end right div /-->'."\n";
+			$html.='<div class="clear"></div>';	
 			return $html;
 	}//end displayRightBox
 	

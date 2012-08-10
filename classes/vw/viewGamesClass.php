@@ -9,10 +9,15 @@ class ViewGames extends View{
    /*Main method to display the games page*/
 	protected function displayContent(){
       $this->generated=new Generate();
-		$html.=$this->displayRightContent();
+		$html='<div class="left">';
 		$html.='<div class="post">'."\n";
 		$html.=$this->generated->displayGameBriefs();
 		$html.='</div>'."\n";
+		$html.='</div>'."\n";
+		
+		$html.=$this->displayRightContent();
+		$html.='<div class="clear"></div>';
+		
 		
    	return $html;
 	}//end displayContent

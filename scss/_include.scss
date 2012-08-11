@@ -5,7 +5,7 @@
  
 ///* experiments in color
 //$mainColor:darken(mix(#EB3744,#79439A,13%), 20%); 
-$mainColor:#29264D;
+$mainColor:#29264D;//#83cafe;//#29264D
 $links: lighten($mainColor,5%); 
 $lightLinks:lighten(mix($mainColor,#8e6c39, 40%),45%);  
 $visitedLinks: mix($mainColor,#8e6c39, 40%);

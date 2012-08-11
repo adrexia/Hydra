@@ -224,7 +224,7 @@ html[xmlns] .slides {
      }
   &.flex-active {
     background: #0C0B13;
-    background: rgba(#0C0B13, 0.9);
+    background: rgba(darken($mainColor,15%), 0.9);
     cursor: default; } }
 
 .flex-control-thumbs {

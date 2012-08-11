@@ -675,6 +675,7 @@ div#extraInfo {
   overflow: hidden;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=hIEfix.png,sizingMethod=crop);
   zoom: 1;  
+  text-shadow: 0px 2px 0px darken($mainColor, 20%);
 }
 
 div#titleText {
@@ -682,6 +683,7 @@ div#titleText {
   float: left;
   font-size: 3em; 
   line-height:1em; 
+  text-shadow: 0px 2px 0px darken($mainColor, 20%);
 }
 
 div#title {
@@ -696,6 +698,7 @@ div#subTitleText {
   /*Live Action Roleplaying Convention*/
   padding-top: 15px;
   font-size: 1.2em;  
+  text-shadow: 0px 2px 0px darken($mainColor, 20%);
 }
 
 div#subTitleText h2 {
@@ -1491,7 +1494,6 @@ textarea {
   text-align: left;
   float: left;
   width:100%;
-  max-width: 250px;
   height: 100px;  
 }
 

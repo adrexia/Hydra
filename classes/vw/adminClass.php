@@ -224,7 +224,7 @@ class Admin extends View{
 			$html.='<td class="email"><a href="mailto:'.$userEmail.'">'.$userEmail.'</a></td>';
 			$html.='<td class="details"><a href="#" class="button show noView" id="'.$userName.'">show</a></td>';
 			$html.='</tr>';
-			$html.='<tr class="'.$userName.'"><td class="toggle" colspan="3">';
+			$html.='<tr class="'.$userName.'"><td class="toggle" colspan="5">';
 			$html.='<ul class="gameList hidden">';
 			$html.='<li><span class="label">Membership:</span> '.$infoMemberShip.'</li>'; // infoMemberShip, infoAttend, infoAccom, infoPlayWith, infoNotPlayWith, infoTransport, infoFood, infoComments
 			$html.='<li><span class="label">Attending:</span>'.$infoAttend.'</li>';
@@ -312,7 +312,7 @@ class Admin extends View{
 			$html.='<td class="details"><a href="#" class="button show noView">show</a></td>';
 			$html.='</tr>';
 			$html.='<tr class="admin">';
-			$html.='<td class="toggle" colspan="6">';
+			$html.='<td class="toggle" colspan="7">';
 			$html.='<ul class="gameList wide hidden">';
 			$html.='<li><h5>Description</h5> '.nl2br($this->generated->stripHTMLTags(stripslashes($gameDescription))).'</li>';
 			$html.='<li><span class="label">Genre</span> '.$gameGenre.'</li>';

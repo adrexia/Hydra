@@ -88,6 +88,15 @@ abstract class View{
 		return $html;
 	}//end displayHeader class
 	
+	private function mobileHeader(){
+	        $html='<div id="mobileTitle">'."\n";
+                $html.='<h1>HYDRA</h1> &bull;'."\n";
+                $html.='<div class="subTitleText"><h2>Live Action Roleplaying Convention</h2></div>'."\n";
+                $html.='</div>'."\n";
+	                
+	        return $html;
+	}
+	
 	/*********************************************************************
 	 * Method generates the non-visual html for the header
 	 **********************************************************************/
@@ -178,6 +187,7 @@ abstract class View{
 		$html='<div id="userNav">'."\n";
 		$html.='<div class="wrap">'."\n";
 		$html.='<div id="position">'."\n";
+                $html.=$this->mobileHeader();
 		$html.='<ul id="mainNav">'."\n";
 		$html.=$this->displayAdminLinks(); //displays the links at the top
 		$html.='</ul>'."\n";
@@ -185,6 +195,7 @@ abstract class View{
 		$html.='</div> <!--end position div/-->'."\n";
 		$html.='</div> <!--end wrap div/-->'."\n";
 		$html.='</div> <!--end userNav div/-->'."\n";	
+                $html.='<div class="clear"></div>';
 		return $html;	
 	}//end displayUserNav method
 	

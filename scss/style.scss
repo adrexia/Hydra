@@ -12,7 +12,7 @@
 **********************************/
 body {
   font-family: helvetica, arial, verdana, sans-serif;
-  background:$mainColor; 
+  background:$mainColor;
   color: #000000;
   font-size: 15px; 
   line-height:1.2em;
@@ -21,6 +21,11 @@ body {
   clear: both;
 }
 
+#header{
+  background:url(../images/t.png) no-repeat 100px 100px; 
+  padding-bottom:20px;
+  margin-bottom:-20px;
+}
 
 .space {
   margin-top: 60px;  

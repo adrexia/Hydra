@@ -266,8 +266,8 @@ abstract class View{
 		$html.='<div id="extraInfo">'."\n";
 		$html.='<div class="wrap">'."\n";
 		$html.='Brookfields, Wainuiomata'."\n";
-		$html.='<img src="images/logo.png" width="130" height="117" id="logo" alt="hydra logo" />'."\n";
-		$html.='Wellington, April 2012'."\n";
+		$html.='<img src="images/logo2.png" width="130" height="117" id="logo" alt="hydra logo" />'."\n";
+		$html.='Wellington, April 2013'."\n";
 		$html.='</div>'."\n";
 		$html.='</div><!--End extrainfo Div/-->'."\n";
 		return $html;

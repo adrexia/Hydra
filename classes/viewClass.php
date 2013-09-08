@@ -37,7 +37,7 @@ abstract class View{
 	/**********************************************************************************
 	 *	Method displays the breadcrumbs and headings of a page
 	*********************************************************************************/
-	private function displayContentWrap(){		
+	private function displayContentWrap(){	
 		$generated=new Generate();
 		$crumbs=$this->rs['pagePath'];
 		$crumbs=explode(">", $crumbs);
@@ -90,9 +90,13 @@ abstract class View{
 	
 	private function mobileHeader(){
 	        $html='<div id="mobileTitle">'."\n";
-                $html.='<h1>HYDRA</h1> &bull;'."\n";
-                $html.='<div class="subTitleText"><h2>Live Action Roleplaying Convention</h2></div>'."\n";
-                $html.='</div>'."\n";
+                $html.='<h1>HYDRA</h1> '."\n";
+                $html.='<div class="subTitleText"><h2>Larp Convention</h2></div>'."\n";
+            $html.='<div class="icons">';
+            $html.='<div id="loginIcon" class="icon icon-signin"></div>'; 
+            $html.='<div id="menuIcon" class="icon icon-reorder"></div>';    
+            $html.='</div>'."\n";
+            $html.='</div>'."\n";
 	                
 	        return $html;
 	}
@@ -267,7 +271,7 @@ abstract class View{
 		$html.='<div class="wrap">'."\n";
 		$html.='Brookfields, Wainuiomata'."\n";
 		$html.='<img src="images/logo2.png" width="130" height="117" id="logo" alt="hydra logo" />'."\n";
-		$html.='Wellington, April 2013'."\n";
+		$html.='Wellington, April 2014'."\n";
 		$html.='</div>'."\n";
 		$html.='</div><!--End extrainfo Div/-->'."\n";
 		return $html;

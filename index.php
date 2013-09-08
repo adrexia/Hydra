@@ -1,5 +1,6 @@
 <?php
 session_start();//Start the session
+$_GET['live']=true; //open game reg
 /*index.php runs all other classes*/
 /*Classes to include*/
 include_once 'classes/viewClass.php';

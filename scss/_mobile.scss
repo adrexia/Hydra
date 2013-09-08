@@ -1,12 +1,35 @@
 
 @mixin mobile{
+  body{
+    font-size:16px;
+  }
   .wrap{
     width:100%;
   }  
+  div#banner{
+    margin-left:0;
+    .wrap{
+      padding: 20px 20px 20px 20px;
+      @include border-box;
+    }
+  }
+  
+  #breadcrumbs{
+    margin-right:20px;
+  }
+
+  img, table{
+    max-width:100%;
+  }
+   div.pageInfo{
+      @include border-box;
+      max-width:100%;
+   }
   
   div.left, div.right{
     float:none;
     width:100% !important;
+    max-width:100%;
     padding:20px;
    @include border-box;
   }
@@ -23,29 +46,53 @@
  
   
   #mobileTitle{
-    @extend #titleText;
-   font-family: RomanCapsRegular, SRomanSD, FFRomanSD, IERomanSD, serif;
-  font-smooth: always;
-  font-stretch: wider;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.496);
-  filter: dropshadow(color = white, offx = 1, offy = 0);
-  -webkit-font-smoothing: antialiased;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=hIEfix.png,sizingMethod=crop);
-  zoom: 1;  
+     float: left;
+    font-size: 3em; 
+    line-height:1em; 
+    text-shadow: 0px 2px 0px darken($mainColor, 20%);
+    font-family: RomanCapsRegular, SRomanSD, FFRomanSD, IERomanSD, serif;
+    font-smooth: always;
+    font-stretch: wider;
+    -moz-text-stroke: 1px rgba(255, 255, 255, 0.496);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.496);
+    filter: dropshadow(color = white, offx = 1, offy = 0);
+    -webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=hIEfix.png,sizingMethod=crop);
+    zoom: 1;  
     display:block;    
-    height:50px;
     font-size:1em !important;
     padding:10px 20px;
     width:100%;
+    @include clearFix;
+    @include border-box;
      background:rgba(#000,0.8) url(../images/texture5.png) top left repeat !important;  
      border-bottom:1px solid rgba(darken($mainColor,25%),0.8);
     h1{
-      font-size:20px;
+      font-size:2em;
       line-height:1.2em;
+      float:left;
      }
-     h2{
-       font-size:15px;
-     }
+    h2{
+      display:none;
+      font-size:0.8em;
+      float:left;
+      margin-left:20px;
+      line-height:3em;
+    }
+    .icons{
+      float:right;
+    }
+    .icon{
+      margin:10px;
+      font-size:25px;
+      text-align:right;
+      display:inline-block;
+      &:hover{
+        color: rgba(#faffbd,1);
+      }
+    }
+
   }
   
   div#position{
@@ -69,16 +116,19 @@
       width:100%;
  
     }
-    
 
-    p.login, form#loginForm{
+    textarea, iframe, form{
+      max-width:100% !important;
+    }
+    
+   
+
+  p.login, form#loginForm{
+      display:none;
       border-top:1px solid rgba(darken($mainColor,25%),0.8);
-      position:absolute;
-      top:70px;
-      width:100%;
-      text-align:center;
-      padding:5px 0;
-      display:block;
+      position:relative;
+    //  top:70px;
+      padding:5px 20px;
      // height:50px;
       background:rgba(#000,0.5) url(../images/texture5.png) top left repeat !important;    
       left:0;
@@ -86,29 +136,79 @@
       @include background(
       url(../images/texture5.png) top left repeat    
       );
+      z-index:0;
+
+      .navLabel{
+        padding:0;
+      }
+      label{
+        font-size:1.2em !important;
+        display:block;
+        margin:0;
+        padding:0;
+      }
+      input{
+        @include roundAllCorners(5px);
+        text-align:left;
+        width:100%;
+        margin:0;
+        padding:0 2px;
+        line-height:30px;
+        height:30px;
+        &#loginSubmit{
+          color:#fff;
+          padding:0 5px;
+          border:1px solid lighten(#000, 30%);
+
+          margin-top:10px;
+          @include topGradient(lighten(#000, 44%), #000);
+          &:hover{
+             @include topGradient(#000,lighten(#000, 44%));
+          }
+        }
+      }
+    }
+
+
+    .position{
+      @include clearBoth;
     }
     
-    
-
+  
   
     ul#mainNav{
+      display:none;
+      @include clearFix;
+      position:relative;
+      z-index:1;
       margin-left:0;
       margin-right:0;
-      margin-top:40px;
-      padding:0 20px;
-      @include background(
-        url(../images/texture5.png) top left repeat    
-      );
+      padding:0;
+      float:none;
       width:100%;
-      border-top:1px solid rgba(darken($mainColor,25%),0.8);
-     // border-bottom:1px solid rgba(#25242B,0.2);
-      
+      @include border-box;
+      border-top:1px solid rgba(darken($mainColor,5%),0.8);
       li{
+        &:hover{
+            background-color:rgba(lighten($mainColor,0.1),0.3);
+            a{
+              color:#fff;
+            }
+        }
+        a{
+          display:block;
+          &.details{
+            text-align:left;
+          } 
+
+        }
+        @include clearBoth;
+        float:left;
+        padding:8px 20px;
          width:100%;
         display:none;
         border-bottom:1px solid rgba(darken($mainColor,25%),0.8);
         border-top:1px solid rgba(#25242B,0.2);
-        padding:8px 0;
         &:last-child{
           border-bottom:none;
         }

@@ -1,7 +1,14 @@
 (function($) {
    $(document).ready(function(){
    		var object=null;
-		var request = null;		
+		var request = null;	
+
+		$('#menuIcon').click(function(){
+			$('#mainNav').slideToggle('slow');
+		});	
+		$('#loginIcon').click(function(){
+			$('div#usernav form#loginform, p.login').slideToggle('slow');
+		});	
 
 		$('.flexslider').flexslider({
 		        pauseOnAction: false,
@@ -58,12 +65,7 @@
 
 		javascriptOn();
 		
-		function javascriptOn(){
-			$('a').attr('href', function(){
-				if($(this).attr('href')&&$(this).attr('href').indexOf("js=true")==-1){
-					$(this).attr('href',$(this).attr('href')+"&js=true");		
-				}	
-			});
+		function javascriptOn(){		
 			$('a.accepted').click(function(){
 				object =this;
 				changeGameStatus();	

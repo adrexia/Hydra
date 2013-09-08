@@ -5,7 +5,7 @@
 @import 'mobile';
 
 
-
+ 
 
 
 /*********************************
@@ -22,7 +22,7 @@ body {
 }
 
 #header{
-  background:url(../images/t.png) no-repeat 100px 100px; 
+  position:relative;
   padding-bottom:20px;
   margin-bottom:-20px;
 }
@@ -32,7 +32,8 @@ body {
 }
 
 /**************************************
-Content area rulestest
+Content area rules
+test
 ***************************************/
 .wrap {
   /*Sets content to center */
@@ -58,9 +59,10 @@ div{
   &.left {
     width:65%;
     max-width: 600px; 
-   // margin-top:50px;
+    padding-bottom:20px;
     float:left;
     margin-right:110px;
+    @include clearBoth;
   }
   
   &#userNav {
@@ -163,6 +165,7 @@ div.post {
   margin:50px 0 0 0 !important;
   .left &{
     margin: 0 !important;
+    @include clearFix;
   }
   
   width: 100%; 
@@ -176,9 +179,15 @@ ul#login {
 
 div#banner {
   /*border-top:1px solid #2D0260;*/
-  padding: 30px 40px 0px 40px;
+  margin-left:-50px;
   /*top right bottom left*/
   color: #ffffff;  
+  
+}
+
+div#banner .wrap{
+  padding: 30px 40px 60px 90px;
+  background:url(../images/t.png) no-repeat 0px 50px; 
 }
 
 div#bannorImage {
@@ -188,7 +197,7 @@ div#bannorImage {
 }
 
 div#bannorImage img {
-  margin-top: -50px;  
+  
   
 }
 
@@ -202,10 +211,11 @@ div.mainContent {
   margin-bottom: 60px;
   background-color: #ffffff;
   color: #838383;
-  margin-top: 20px;
+ // margin-top: 20px;
   -webkit-box-shadow: 0px 0px 12px 6px rgba(darken($mainColor, 30%), 0.45);
   -moz-box-shadow: 0px 0px 12px 6px rgba(darken($mainColor, 30%), 0.45);
-  box-shadow: 0px 0px 12px 6px rgba(darken($mainColor, 30%), 0.45);  
+  box-shadow: 0px 0px 12px 6px rgba(darken($mainColor, 30%), 0.45); 
+  @include clearBoth; 
 }
 
 div.post {
@@ -247,12 +257,16 @@ ul#mainNav{
   li {
     padding-bottom: 20px;  
     line-height:30px;
+    a{
+      z-index:1;
+    }
   }
 } 
 
 
 
 .triangle {
+  z-index:-1;
   left: 0%;
   position: absolute;
   top: -13px;
@@ -343,7 +357,7 @@ span.navLabel {
 }
 
 input#searchTerm, input#searchSubmit {
-  width: 100%;  
+  width: 90%;  
 }
 
 h3{
@@ -574,6 +588,7 @@ div.gameNav{
 
 .pageForm {
   width: 600px;
+  max-width:100%;
   border-bottom: 1px solid #ccc;
   margin-bottom: 20px;  
 }
@@ -607,7 +622,9 @@ h3, .h4 h4 {
   color:$headingColor;
   font-variant: small-caps;
   padding-bottom: 10px;
-  font-family: Times, serif;  
+  font-family: Times, serif; 
+  float:left;
+  width:75%; 
 }
 
 .h4 h4 {
@@ -622,9 +639,10 @@ h5{
   }
 
 h3 a, h3 a:link, h3 a:visited, h3 a:active, h3 a:hover {
-  color:$headingColorLink;
+  color:mix($mainColor, $links);
   text-decoration: none;  
 }
+
 
 .h3, .h4 {
   padding: 0;
@@ -632,7 +650,9 @@ h3 a, h3 a:link, h3 a:visited, h3 a:active, h3 a:hover {
   padding-bottom: 10px;
  // width: 600px;
   width:100%;
+  @include box-sizing(border-box);
   border-bottom: 1px solid #ccc;  
+  @include clearFix;
 }
 
 .h4 {
@@ -664,9 +684,12 @@ div#extraInfo img {
 }
 
 div#extraInfo {
-  margin-top: -80px;
-  position: relative;
-  top: 50px;
+@include box-sizing(border-box);
+ // margin-top: -80px;
+  position: absolute;
+  width:100%;
+  bottom:-8px;
+ // top: 50px;
   text-align: center;
   font-family: RomanCapsRegular, SRomanSD, FFRomanSD, IERomanSD, serif;
   font-smooth: always;
@@ -716,6 +739,7 @@ div#titleText h1, div#subTitleText h2 {
  
 
 h4.profileH, p.error {
+  @include box-sizing(border-box);
   position: absolute;
   top: -30px;
   text-align: right;
@@ -733,7 +757,8 @@ h4.profileH, p.error {
 .gameDetails h3 {
   display: inline-block;
   max-width: 490px;  
-   width:100%;
+  width:75%;
+  float:left;
 }
 
 .search h5 {
@@ -751,6 +776,7 @@ h4.profileH, p.error {
 }
 
 #commentError {
+  @include box-sizing(border-box);
   max-width: 300px;
    width:100%;
   font-size: 0.9em;
@@ -774,12 +800,12 @@ h4.profileH, p.error {
 }
 
 .h3Form {
+  @include box-sizing(border-box);
   clear: left;
-  margin: 0px;
+  margin: 20px 0px 0 0;
   padding: 0;
   padding-bottom: 10px;
-  max-width: 600px;
-   width:100%;
+  width:100%;
   overflow: hidden;
   border-bottom: 1px solid #ccc;  
 }
@@ -794,6 +820,7 @@ h5.pageTitle {
 }
 
 .commentTitle {
+  @include box-sizing(border-box);
   border: 1px solid #ccc;
   border-bottom: 1px solid #efefef;
   margin: 0;
@@ -804,7 +831,8 @@ h5.pageTitle {
   max-width: 535px;
    width:100%;
   font-variant: small-caps;
-  font-weight: normal;  
+  font-weight: normal; 
+  @include roundTopCorners(3px); 
 }
 
 .commentTitle h5 {
@@ -818,6 +846,7 @@ h5.pageTitle {
 }
 
 h2#adminNav {
+  @include box-sizing(border-box);
   position: relative;
   top: -30px;
   left: 20px;
@@ -842,6 +871,7 @@ h2#adminNav a {
 div.pageInfo .h3 {
   max-width: 560px; 
   width:100%; 
+  @include box-sizing(border-box);
 }
 
 /******************************************
@@ -939,17 +969,16 @@ Main content styleing
 }
 
 .postFooter {
+  @include box-sizing(border-box);
+  float:left;
+  width:100%;
   font-variant: small-caps;
   border-top: 1px solid #ccc;
-  position: relative;
-  top: 20px;
-  padding: 10px;
+  padding: 5px 10px;
   text-align: right;
-  font-size: 0.7em;
-  /*Correct size?*/
+  font-size: 0.9em;
   background-color: #f2f2f2;
   border: 1px solid #ccc;
-  height: 12px;  
 }
 
 .pageInfo .postFooter {
@@ -970,13 +999,17 @@ Main content styleing
 }
 
 .pageContent, .formContent, .pageComment {
+  @include clearBoth;
+  @include clearFix;
+  @include box-sizing(border-box);
   font-weight: normal;
-  padding-right: 50px;
   margin-bottom: 5px;
   padding-bottom:40px;
   line-height: 1.2em;
   color: #363636;
   word-spacing: 0.3em; 
+  //float:left;
+  width:100%;
  }
 
 .pageComment .note {
@@ -1023,7 +1056,7 @@ div.pageInfo {
   padding: 20px 20px 20px 20px;  
   @include roundAllCorners(3px);
   float:left;
- 
+  @include clearFix;
 }
 
 .gameDetails .postFooter {
@@ -1038,7 +1071,7 @@ p.warning {
 
 p.space {
   margin: 20px;
-  margin-right: -20px;  
+  margin-bottom: 50px;  
 }
 
 .note {
@@ -1060,9 +1093,10 @@ div.note{
   text-align:left;
 }
 
-.info {
-  position: relative;
-  top: -100px;  
+.info, .bioText {
+  float:left;
+  width:80%;
+  @include clearFix;
 }
 
 .timeStamp {
@@ -1079,10 +1113,11 @@ div.note{
 }
 
 em.author {
-  float: right;
+  float: left;
   font-weight: normal;
   font-size: 0.8em;
  // color: #363636;
+ width:25%;
   word-spacing: 0.3em;  
 }
 
@@ -1266,7 +1301,7 @@ div.games table, table.gameAdmin {
   margin-bottom: 1em;  
 }
 
-.gameDetails tr td, table.gameAdmin{
+.gameDetails, table.gameAdmin{
    tr{
      td {
       max-width: 200px;
@@ -1277,12 +1312,8 @@ div.games table, table.gameAdmin {
       .gameList{
         display:none;
         width:100%;
-      max-width:600px;
-        
-        -o-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
+        max-width:600px;
+        @include border-box;
       }
     }     
    }   
@@ -1550,15 +1581,15 @@ ul.form li.submit {
   border: 1px solid #ccc;
   background-color: #f2f2f2;  
   @include roundBottomCorners(2px);
+  @include border-box;
+  @include clearFix;
 }
 
 .leaveComment .info {
   height: 80px;  
 }
 
-.formContent .imgWrap {
-  left: 420px;  
-}
+
 
 .leaveComment input {
   width:100%;
@@ -1824,22 +1855,17 @@ Comments
 User Details
 *******************************************/
 .imgWrap {
-  position: relative;
-  left: 450px;
-  width: 100px;
+  @include box-sizing(border-box);
+  @include clearFix;
+  float:left;  
   border: 1px solid #e9e9e9;
   margin-top: 20px;
-  height: 110px;  
   img{
     width: 100px;
   }
 }
 
-.bioText {
-  margin-top: -130px;
-  width:100%;
-  max-width: 420px;  
-}
+
 
 p.userName {
   text-align: center;
@@ -1944,7 +1970,7 @@ ul{
       margin-left: 0px;  
       .postFooter {
         color: #ffffff;
-        border: 1px solid #ccc;
+        border: 1px solid #0C0B13;
         float: left;
         padding: 5px;
         padding-left: 10px;
@@ -1956,9 +1982,11 @@ ul{
         @include background(
           $mainColor url(../images/texture5.png) top left repeat    
         );
-        height: 10px;
+        @include roundBottomCorners(3px);
         text-align: right;
         font-size: 0.7em;
+        line-height:2em;
+        height:auto;
         a {
           color: $lightLinks;  
         }  

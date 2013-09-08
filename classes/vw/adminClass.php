@@ -4,12 +4,12 @@
 of an Hydra administrator, including game approval, and game assignment
  ********************************************************************************************/
 class Admin extends View{   
-	 private $model;
-	 private $msg;
-  	 private $generated;
+        private $model;
+        private $msg;
+        private $generated;
     
-    /*Main, and required, method for the Admin view class*/ 
-	 protected function displayContent(){
+        /*Main, and required, method for the Admin view class*/ 
+        protected function displayContent(){
 		if(!$_SESSION['userType']||$_SESSION['userType']=='user'){//if only user rights, send to front page
 			  header('Location: index.php');
 			exit;	
@@ -24,14 +24,14 @@ class Admin extends View{
 				}else{
 					$otherStatus="accepted";
 				}
-				if(isset($_GET['js'])){
+				
 					$url='<a href="index.php?pageName=admin&gameID='.$_GET['gameID']."&amp;gameStatus=";
 					$url.=$otherStatus;
 					$url.='&amp;js=true" class="buttonImg '.$otherStatus.'" title="';
 					$url.=$otherStatus.': change to '.$gameStatus.'?">'.$otherStatus.'</a>';
 					echo $url;
 					exit;
-				}
+				
 				header('Location: index.php?pageName=admin');
 						exit;
 		   }else if(isset($_GET['userType'])){
@@ -93,9 +93,12 @@ class Admin extends View{
 			 	$html.='<a href="index.php?pageName=admin&amp;userID='.$_GET['userID'].'&amp;userType=user" class="button user">Remove mod rights</a></p>';
 			 }
 			 $html.='</td></tr></table></div>';
+                         $html.='<h4>Game choices</h4>';
+                         $html.=$this->generated->displayUserGames($_GET['userID']);
 			 $html.='<p class="note">More Coming soon... <br /><a href="index.php?pageName=admin">Return to administration page</a></p>';
 			 
 			 $html.='</div>';
+                         $html.='<div class="clear"></div>';
 	 	 	return $html;
 	 }
 	 

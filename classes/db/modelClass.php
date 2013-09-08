@@ -87,8 +87,8 @@ class Model extends DataBase{
 		$result=$this->removeUser($userID);
 		$dir='users/'.$userName.'/';
 		$folder=$this->deleteUserFolder($dir); //delete users folder and files
-	   unset($_GET['action']);
-      $_GET['pageName']='logout'; //log the user out
+	       unset($_GET['action']);
+                $_GET['pageName']='logout'; //log the user out
 		$_GET['history']='register';
 		$result=$this->checkUserSession();
 		return $result;		
@@ -120,7 +120,7 @@ class Model extends DataBase{
    ******************************************************************************************************/
 	public function checkUserSession(){		
 		if($_GET['pageName']=='logout'){ //if pageName is logout
-        $result=$this->logOut();
+                        $result=$this->logOut();
 		}      
 		if(isset($_POST['login'])){//if form has been submitted: validate
          $result=$this->validateUser();
@@ -156,9 +156,9 @@ class Model extends DataBase{
 			$pageName="news";
 		}
 		if($_GET['userID']){
-			$pageName=$pageName.'&amp;userID='.$_GET['userID'];				
+			$pageName=$pageName.'&userID='.$_GET['userID'];				
 		}elseif($_GET['gameID']){
-			$pageName=$pageName.'&amp;gameID='.$_GET['gameID'];		
+			$pageName=$pageName.'&gameID='.$_GET['gameID'];		
 		}
 		header('Location: index.php?pageName='.$pageName);
 		return $result;
@@ -198,12 +198,16 @@ class Model extends DataBase{
       $pageName=$_GET['pageName'];   
       switch($pageName){       
          case 'profile':
-            $result['msg']=$this->validateProfile();           
+                 
+            $result['msg']=$this->validateProfile();      
+                
             break;
          case 'register':
+         
 				if($_POST['userID']==0){
 					$result['msg']=$this->validateCreateAccount();
 				}else{
+				         
 					$result['msg']=$this->validateUpdateAccount();
 				}
             break;
@@ -248,23 +252,24 @@ class Model extends DataBase{
     * Method runs the profile post array through validation
    **********************************************************************************/
    private function validateProfile(){
-      extract($_POST); 
-      $oldData=$this->getUserDetails($_SESSION['userID']);
-      if($oldData&&strlen($userEmail<3)){
-         $userEmail=$oldData['userEmail'];
-         $_POST['userEmail']=$oldData['userEmail'];              
-      }
-      $result['msg']=$this->validate->checkRepeat($userPassword, $userPasswordRepeat);
-		if(!strlen($result['msg'])>0){
-         $result['msg'].=$this->validate->checkEmail($userEmail);
-      }
-		if($userFullName==""||strlen($userFullName)<2){
-			echo $oldData['userFullName'];
-			$_POST['userFullName']=$oldData['userFullName'];
-		}		
-		$result['msg'].=$this->validate->checkName($_POST['userFullName']);			
-      unset($_GET['edit']);
-      return $result['msg'];
+        extract($_POST); 
+        $oldData=$this->getUserDetails($_SESSION['userID']);
+        if($oldData&&strlen($userEmail)<3){ 
+                $userEmail=$oldData['userEmail'];
+                $_POST['userEmail']=$oldData['userEmail'];              
+        }
+        $result['msg']=$this->validate->checkRepeat($userPassword, $userPasswordRepeat);
+        if(!strlen($result['msg'])>0){
+                $result['msg'].=$this->validate->checkEmail($userEmail);
+        }
+        if($userFullName==""||strlen($userFullName)<2){
+             
+                $_POST['userFullName']=$oldData['userFullName'];
+        }		
+        $result['msg'].=$this->validate->checkName($_POST['userFullName']);		
+        unset($_GET['edit']);
+        
+        return $result['msg'];
    }//end validate Profile   
    
    /**********************************************************************************
@@ -563,12 +568,16 @@ class Model extends DataBase{
 		if exist then check if valid 
    *******************************************************************************************/
    public function processProfile(){
+ 
+          
       $userID = $_POST['userID'];   //if new user $userID will be 0		
-      $vResult=$this->validatePost();	
+      $vResult=$this->validatePost();
+     	
       if(!$vResult['ok']){//if validation fails, return error message
          return $vResult;
       }
       if($userID==0){//checks to see whether this is a new user or an update on the profile
+         
          if($this->makeUserFolders()){ //if new user, make folders
             if($userPic==null){ 
                $file="images/user.png"; //if no picture given, assign default image
@@ -583,6 +592,7 @@ class Model extends DataBase{
       }      
       $rResult=$this->processProfilePic();      
       if($userID==0){ //checks to see whether this is a new user or an update on the profile
+          
          $userID=$this->putProfile(); //create new user and save userID
 			//start session
 			$result=$this->checkUserSession();
@@ -600,7 +610,8 @@ class Model extends DataBase{
 				$rResult['msg']="Failure in Recording Registration Details. Please Try Again";
 			} 
       }else{ //if user exists need to check if info exists
-         $rResult['msg']=$this->updateProfile($_SESSION['userID']); //comment updated in db
+         
+         $rResult['msg']=$this->updateProfile($userID); //comment updated in db
 			//if info exists need to run an  update rather than a put
 			if($_GET['pageName']=='register'){
 				if(!$this->checkInfoForUser($userID)){

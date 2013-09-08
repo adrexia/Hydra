@@ -110,19 +110,20 @@ class Profile extends View{
 		}else{
 			 $imgSrc='<img src="users/'.strtolower($userName).'/'.$userPic.'" alt="'.$userName.'" />';		
 		}			
-	   $html='<div class="h3"><h3>'.$userName.'\'s Profile</h3></div>'."\n";//end h3div
-		$html.='<div class="formContent">'."\n";	
+	   	$html='<div class="h3"><h3>'.$userName.'\'s Profile</h3></div>'."\n";//end h3div
+		$html.='<div class="formContent">'."\n";
+		//If user has the rights to edit the profile and has chosen to do so, display editform. Else display profile info	
+		if($this->allow&&$_GET['action']=='edit'){
+			$html.=$this->profileForm($results);
+		}else{
+			$html.=$this->displayProfileInfo($results); //for content still open
+		}
 		$html.='<div class="imgWrap">'."\n";
 		$html.=$imgSrc;
 		$html.='<p class="userName"><a href="index.php?pageName=profile&amp;userID='.$userID.'">'.$userName.'</a></p>'."\n";
-		$html.='</div>'."\n";//end image wrap		
-		//If user has the rights to edit the profile and has chosen to do so, display editform. Else display profile info	
-		if($this->allow&&$_GET['action']=='edit'){
-			$html.=$this->profileForm($results);	
-			$html.='</div>';//end form content
-		}else{
-			$html.=$this->displayProfileInfo($results); //for content still open
-		}		
+		$html.='</div>'."\n";//end image wrap
+		$html.='</div>';//end form content
+		$html.= $this->postFooter();
 		return $html;
 	}//end showProfile
 	
@@ -156,14 +157,16 @@ class Profile extends View{
 			$html.="No Bio";
 			}
 		$html.='</p>'."\n".'</div>'."\n";//end biotext
-		$html.='</div>'."\n";//end bioDetail	
-		$html.='</div>'."\n";//end form content
-		$html.='<div class="space"></div>'."\n";
-		$html.='<p>&nbsp;</p>'."\n";
-		$html.='<div class="postFooter">'."\n";
+		$html.='</div>'."\n";//end bioDetail
+		
+		return $html;
+	}//end displayprofileinfo
+
+	private function postFooter(){
+		$html='<div class="postFooter">'."\n";
 		if($this->allow){
 			$html.='<!--this user owns this profile, or user is admin/-->'."\n";
-			$html.='<a href="index.php?pageName=profile&amp;userID='.$_GET['userID'].'&amp;action=edit" class="highlight">edit profile</a>'."\n";	
+			$html.='<a href="index.php?pageName=profile&amp;userID='.$_GET['userID'].'&amp;action=edit" class="highlight">Edit Profile</a>'."\n";	
 		}else if($_SESSION['userID']){
 			$html.='<!--another user owns this profile/-->'."\n";
 			if($reportMsg=="Success"){
@@ -171,11 +174,10 @@ class Profile extends View{
 			}else{
 				$html.='<a href="index.php?pageName=profile&amp;userID='.$_GET['userID'].'&amp;action=report" class="highlight">report</a>'."\n";
 			}
-		}			
-		$html.='</div>'."\n";//end postFooter
-		$html.='<div class="space"></div>'."\n";
+		}
+		$html.='</div>'."\n";
 		return $html;
-	}//end displayprofileinfo	
+	}
 	
 	/*********************************************************************
 	 *Method displays the form to edit user profiles

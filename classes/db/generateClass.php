@@ -146,7 +146,7 @@ class Generate extends DataBase
 		$newsText=$this->stripHTMLTags(stripslashes($newsText));	
 		//$newsText=htmlentities($newsText);
 		$newsDate=strtotime($newsDate);
-		if($newsDate>time()){//if news date is in the future (used for the About Post)
+		if($newsTitle == "About Hydra"){//(used for the About Post)
 			$wrap='<div class="pageInfo">'."\n";
 			if($_SESSION['userType']=="su"||$_SESSION['userType']=="mod"){
 				$footer='<div class="postFooter"><a href="index.php?pageName=news&amp;newsID='.$newsID.'&amp;action=edit">Edit</a> '."\n";
@@ -168,7 +168,7 @@ class Generate extends DataBase
 			}
 		}	
 		$html.=$wrap;		
-		$html.='<div class="h3"><h3><a name="'.$newsID.'">'.$newsTitle.'</a></h3>'."\n";
+		$html.='<div class="h3"><h3 id="'.$newsID.'">'.$newsTitle.'</h3>'."\n";
 		$html.='<em class="author">posted by <a href="index.php?pageName=profile&amp;userID='.$userID.'">'.$userName.'</a></em></div>'."\n";
 		$html.='<div class="newsContent">'."\n".'<p>'."\n";
 		if(strlen($newsText)>0){
@@ -177,6 +177,7 @@ class Generate extends DataBase
 		$html.='</p>'."\n".'</div><!-- end postContent div /-->'."\n";
 		$html.=$footer;
 		$html.='<div class="space"></div>'."\n".'</div><!-- post div /-->'."\n";
+                $html.='<div class="clear"></div>';
 		return $html;
 	}//end showNewsPost
 	
@@ -639,10 +640,7 @@ class Generate extends DataBase
 		$page=str_replace("&","&amp;",$page);
 		$html.='<form action="'.$page.'" method="post" id="form">'."\n";
 		$html.='<div class="formContent">'."\n";
-		$html.='<div class="imgWrap">'."\n";
-		$html.=$imgsrc;
-		$html.='<p class="userName"><a href="index.php?pageName=profile&amp;userID='.$userID.'">'.$userName.'</a></p>'."\n";
-		$html.='</div>'."\n";
+		
 		$html.='<div class="info">'."\n";
 		$html.='<label for="commentTitle">Title</label>'."\n";
 		$html.='<input type="text" name="commentTitle" value="'.htmlentities(stripslashes($commentTitle),ENT_QUOTES).'" id="commentTitle" />'."\n";	
@@ -661,7 +659,12 @@ class Generate extends DataBase
 		$html.='<input type="hidden" name="userID" value="'.$_SESSION['userID'].'" id="userID" />'."\n";
 		$html.='<p class="submit">'."\n";
 		$html.='<input type="submit" name="commentEdit" value="Re-Submit Comment" id="cSubmit" /></p>'."\n";
-		$html.='</div>'."\n".'</div>'."\n".'</form>'."\n".'</div>'."\n".'</div>'."\n";
+		$html.='</div>'."\n".
+		$html.='<div class="imgWrap">'."\n";
+		$html.=$imgsrc;
+		$html.='<p class="userName"><a href="index.php?pageName=profile&amp;userID='.$userID.'">'.$userName.'</a></p>'."\n";
+		$html.='</div>'."\n";
+		$html.='</div>'."\n".'</form>'."\n".'</div>'."\n".'</div>'."\n";
 		$html.='<ul class="gameComments">'."\n";
 		return $html;
 	}	//end showCommentEditForm

@@ -137,7 +137,7 @@ div#banner h1, div#banner h2 {
 h3, h4 {
   display: inline;
   font-size: 1.3em;
-  color:darken($mainColor,13%);
+  color:lighten($mainColor, 35%);
   font-variant: small-caps;
   padding-bottom: 10px;
   font-family: Times, serif;  
@@ -155,7 +155,7 @@ h5{
   }
 
 h3 a, h3 a:link, h3 a:visited, h3 a:active, h3 a:hover {
-  color:darken($mainColor,13%);
+  color:mix(lighten($mainColor,33%), $links);
   text-decoration: none;  
 }
 

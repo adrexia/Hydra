@@ -164,16 +164,16 @@ class Register extends View{
 		  $html='<div class="pageContent">'."\n";
 		  $html.='<div class="h3Form"><h3>User Details</h3></div>'."\n";
 		  $html.='<div class="post">'."\n".'<div class="formContent">'."\n";
+		  $html.='<div class="info">'."\n";
+		  $html.='<p><span class="labelUser">Full Name: </span> '.$userFullName.'</p>'."\n";
+		  $html.='<p><span class="labelUser">Email: </span> <a href="mailto:'.$userEmail.'">'.$userEmail.'</a></p>'."\n";	
+		  $html.='</div>'."\n";//end info
 		  $html.='<div class="imgWrap">'."\n";
 		  $html.=$imgSrc;
 		  $html.='<p class="userName"><a href="index.php?pageName=profile&amp;userID='.$userID.'">'.$userName.'</a></p>'."\n";
 		  $html.='<input type="hidden" name="userID" value="'.$_SESSION['userID'].'" id="userID" />'."\n";
 		  $html.='<input type="hidden" name="userName" value="'.$_SESSION['userName'].'" id="userName" />'."\n";
 		  $html.='</div>'."\n";//end imgwrap
-		  $html.='<div class="info">'."\n";
-		  $html.='<p><span class="labelUser">Full Name: </span> '.$userFullName.'</p>'."\n";
-		  $html.='<p><span class="labelUser">Email: </span> <a href="mailto:'.$userEmail.'">'.$userEmail.'</a></p>'."\n";	
-		  $html.='</div>'."\n";//end info
 		  $html.='</div>'."\n";//end formContent
 		  $html.='</div>'."\n";//end post
 		  $html.='</div>'."\n";//end pageContent
@@ -515,8 +515,8 @@ class Register extends View{
 		  $html.='<div class="left">'."\n";
 		  $html.='<div class="post">'."\n";
 		  $html.='<div class="pageContent">'."\n";
-		  $html.='<div class="h3Form"><h3>Game selection</h3></div><br />'."\n";
-		  		  //$pageDetails=$this->model->getPageContent('register');
+		  $html.='<div class="h3Form"><h3>Game selection</h3></div>'."\n";
+		 //$pageDetails=$this->model->getPageContent('register'); //no interface, so not used
 		  $pageDetails="Game Selection is now open! Choose your games below. Please supply 2 choices for each round.";
 		  
 		 if(!$_GET['live']==true){
